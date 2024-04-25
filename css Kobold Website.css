@@ -1,0 +1,68 @@
+.nav-button {
+  background-color: lightgray; /* Heller Hintergrund für die meisten Buttons */
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px
+}
+.nav-button:hover {
+  background-color: #707070; /* Hintergrundfarbe der Buttons beim Hover */
+}
+
+.title-container {
+  margin: 1000px 0; /* Abstand oben und unten vom Titel-Container */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Zentriert die Buttons horizontal */
+  gap: 20px; /* Gibt einen Abstand zwischen den Buttons */}
+
+.header {
+  text-align: center; /* Zentriert den Text im Header */
+  padding: 50px 0; /* Fügt oben und unten einen Abstand hinzu */
+}
+#home {
+  background-color: darkgray; /* Dunkler Hintergrund für 'HOME' */
+}
+
+.second-page {
+  padding: 100px;
+  text-align: center;
+}
+
+.second-page p {
+  margin: 30px 0; /* Größerer Abstand zwischen den Sätzen */
+}
+
+/* Stil für die Biene */
+#bee-cursor {
+  position: absolute;
+  pointer-events: none; /* Erlaubt Mausklicks durch das Element hindurch */
+  background-image: url('path/to/your/bee-image.png'); /* Pfad zu Ihrem Bienenbild */
+  background-size: contain;
+  width: 50px; /* Größe der Biene anpassen */
+  height: 50px;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+.title-container h1 {
+  text-align: center; /* Zentriert den Text horizontal */
+  font-family: 'Arial', sans-serif; /* Beispiel: Setzt die Schriftart */
+  margin-bottom: 500px; /* Setzt den Abstand zwischen dem h1 und dem nachfolgenden Text */
+  font-size: 500px; /* Größe der Schrift */
+  line-height: 1.4; /* Zeilenhöhe, um den Zeilenabstand anzupassen */
+}
+
+/* Zusätzliche Stile für Navigation und Header, falls benötigt */
+.header {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
