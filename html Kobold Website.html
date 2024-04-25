@@ -5,14 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Little Ones World</title>
 <link rel="stylesheet" href="css Kobold Website.css">
-<link rel="C:\4. Semester\Kobold Website\Kobold" href="css Kobold Website"> <!-- Stellen Sie sicher, dass der Pfad korrekt ist -->
 </head>
 <body>
 
 <div class="header">
   <!-- Hintergrundvideo -->
   <video id="background-video" loop muted>
-    <source src="C:\4. Semester\Kobold Website\Bilder Videos für die Website\WhatsApp Video 2024-04-22 at 15.17.53" type="video/mp4"> <!-- Aktualisieren Sie dies mit dem korrekten Pfad -->
+    <source src="WhatsApp Video 2024-04-22 at 15.17.53" type="video/mp4"> <!-- Aktualisieren Sie dies mit dem korrekten Pfad -->
     Your browser does not support the video tag.
   </video>
 
@@ -29,16 +28,31 @@
 
 <!-- Die Sätze wurden auf eine neue Sektion unterhalb des Headers verschoben -->
 <div class="second-page">
-  <p>Enter the enchanted realm where grass
-     blades sway like skyscrapers and tiny 
-     beings dance under the moonlit canopy, 
-     welcoming you to the world 
-     of the little ones.</p>
-  <p>In this miniature universe, each dewdrop is a pond and each flower a fortress. Peek behind the veil and immerse yourself in the whimsical wonder of the small beings that call it home.</p>
-  <p>As you tread softly through dew-kissed meadows, a hidden world reveals itself, where whispers of tiny creatures and rustling of tiny wings invite you to explore the magic of the small.</p>
+  <p class="left-aligned">Enter the enchanted realm where grass blades sway like skyscrapers and tiny beings dance under the moonlit canopy, welcoming you to the world of the little ones.</p>
+  <p class="right-aligned">In this miniature universe, each dewdrop is a pond and each flower a fortress. Peek behind the veil and immerse yourself in the whimsical wonder of the small beings that call it home.</p>
+  <p class="left-aligned">As you tread softly through dew-kissed meadows, a hidden world reveals itself, where whispers of tiny creatures and rustling of tiny wings invite you to explore the magic of the small.</p>
 </div>
 
 <div id="bee-cursor"></div> <!-- Element für die Biene -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const beeCursor = document.getElementById('bee-cursor');
+  
+    // Event für Mausbewegungen
+    document.addEventListener('mousemove', (e) => {
+      beeCursor.style.left = e.pageX + 'px';
+      beeCursor.style.top = e.pageY + 'px';
+    });
+  
+    // Event für Touch-Bewegungen (für Touch-Geräte wie Handys und Tablets)
+    document.addEventListener('touchmove', (e) => {
+      const touch = e.touches[0];
+      beeCursor.style.left = touch.pageX + 'px';
+      beeCursor.style.top = touch.pageY + 'px';
+      e.preventDefault(); // Verhindert das Scrollen der Seite beim Bewegen
+    });
+  });
+  </script>
 
 <script src="java.skript Kobold Webiste.js"></script> <!-- Stellen Sie sicher, dass der Pfad korrekt ist -->
 </body>

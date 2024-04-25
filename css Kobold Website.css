@@ -2,27 +2,36 @@
   background-color: lightgray; /* Heller Hintergrund für die meisten Buttons */
   border: none;
   padding: 10px 20px;
-  margin: 5px;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 16px
-}
+  font-size: 16px;}
+
 .nav-button:hover {
   background-color: #707070; /* Hintergrundfarbe der Buttons beim Hover */
 }
 
 .title-container {
-  margin: 1000px 0; /* Abstand oben und unten vom Titel-Container */
+  margin: 15px 0; /* Abstand oben und unten vom Titel-Container */
+  padding: 15px;
 }
 
 .navbar {
+  position: absolute; /* Positionierung relativ zum nächstgelegenen positionierten Ancestor (hier .header) */
+  top: 60c px; /* Setzt die Navbar ganz nach oben */
+  left: 50%; /* Zentriert die Navbar horizontal */
+  transform: translateX(-50%); /* Feinjustierung der Zentrierung */
+  width: 100%; /* Stellt sicher, dass die Navbar die volle Breite hat, wenn notwendig */
   display: flex;
   justify-content: center; /* Zentriert die Buttons horizontal */
-  gap: 20px; /* Gibt einen Abstand zwischen den Buttons */}
+  gap: 5px; /* Gibt einen Abstand zwischen den Buttons */
+  padding: 10px 20px; /* Gibt einen inneren Abstand */
+}
 
 .header {
+  position: relative; /* Macht den Header zum Bezugspunkt für die absolute Positionierung der Navbar */
   text-align: center; /* Zentriert den Text im Header */
-  padding: 50px 0; /* Fügt oben und unten einen Abstand hinzu */
+  padding-top: 0; /* Entfernt den oberen Abstand */
+  padding-bottom: 20px; /* Hält einen unteren Abstand, falls benötigt */
 }
 #home {
   background-color: darkgray; /* Dunkler Hintergrund für 'HOME' */
@@ -30,39 +39,44 @@
 
 .second-page {
   padding: 100px;
-  text-align: center;
+  text-align: center; /* Zentriert den Container, aber die Texte sind individuell ausgerichtet */
 }
 
 .second-page p {
-  margin: 30px 0; /* Größerer Abstand zwischen den Sätzen */
+  font-family: 'Arial', sans-serif; /* Wählen Sie Ihre bevorzugte Schriftart */
+  font-size: 20px; /* Größe der Schrift */
+  margin: 50px 0; /* Größerer Abstand zwischen den Sätzen */
+  width: 80%; /* Bestimmt die Breite jedes Absatzes */
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.left-aligned {
+  text-align: left; /* Linksbündige Ausrichtung für bestimmte Absätze */
+  padding-left: 20px; /* Abstand vom linken Rand */
+}
+
+.right-aligned {
+  text-align: right; /* Rechtsbündige Ausrichtung für bestimmte Absätze */
+  padding-right: 20px; /* Abstand vom rechten Rand */
+}
 /* Stil für die Biene */
 #bee-cursor {
-  position: absolute;
+  position: absolute; /* Sorgt dafür, dass das Bild auf dem gesamten Bildschirm positioniert werden kann */
   pointer-events: none; /* Erlaubt Mausklicks durch das Element hindurch */
-  background-image: url('path/to/your/bee-image.png'); /* Pfad zu Ihrem Bienenbild */
+  background-image: url('bee-1295346_640.png'); /* Stellen Sie sicher, dass dieser Pfad korrekt ist */
   background-size: contain;
-  width: 50px; /* Größe der Biene anpassen */
-  height: 50px;
+  width: 45px; /* Passen Sie die Größe nach Bedarf an */
+  height: 25px; /* Passen Sie die Größe nach Bedarf an */
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 1000; /* Sorgt dafür, dass es über anderen Elementen liegt */
+  display: none; /* Standardmäßig nicht angezeigt, bis die Maus bewegt wird */
 }
+
 .title-container h1 {
   text-align: center; /* Zentriert den Text horizontal */
-  font-family: 'Arial', sans-serif; /* Beispiel: Setzt die Schriftart */
-  margin-bottom: 500px; /* Setzt den Abstand zwischen dem h1 und dem nachfolgenden Text */
-  font-size: 500px; /* Größe der Schrift */
+  font-family: 'Amatic SC', sans-serif; /* Beispiel: Setzt die Schriftart */
+  margin-bottom: 250px; /* Setzt den Abstand zwischen dem h1 und dem nachfolgenden Text */
+  font-size: 100px; /* Größe der Schrift */
   line-height: 1.4; /* Zeilenhöhe, um den Zeilenabstand anzupassen */
-}
-
-/* Zusätzliche Stile für Navigation und Header, falls benötigt */
-.header {
-  text-align: center;
-}
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
 }

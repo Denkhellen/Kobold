@@ -36,3 +36,22 @@ document.addEventListener('DOMContentLoaded', function() {
     beeCursor.style.display = 'block';
   });
 });
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const beeCursor = document.getElementById('bee-cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    beeCursor.style.left = e.pageX + 'px';
+    beeCursor.style.top = e.pageY + 'px';
+    beeCursor.style.display = 'block'; // Stellt sicher, dass die Biene angezeigt wird
+  });
+
+  document.addEventListener('touchmove', (e) => {
+    const touch = e.touches[0];
+    beeCursor.style.left = touch.pageX + 'px';
+    beeCursor.style.top = touch.pageY + 'px';
+    beeCursor.style.display = 'block'; // Stellt sicher, dass die Biene auch bei Touch angezeigt wird
+    e.preventDefault(); // Verhindert das Scrollen der Seite beim Bewegen
+  });
+});
+</script>
