@@ -17,7 +17,7 @@
 
 .navbar {
   position: absolute; /* Positionierung relativ zum nächstgelegenen positionierten Ancestor (hier .header) */
-  top: 60c px; /* Setzt die Navbar ganz nach oben */
+  top: 25px; /* Setzt die Navbar ganz nach oben */
   left: 50%; /* Zentriert die Navbar horizontal */
   transform: translateX(-50%); /* Feinjustierung der Zentrierung */
   width: 100%; /* Stellt sicher, dass die Navbar die volle Breite hat, wenn notwendig */
@@ -30,25 +30,11 @@
 .header {
   position: relative; /* Macht den Header zum Bezugspunkt für die absolute Positionierung der Navbar */
   text-align: center; /* Zentriert den Text im Header */
-  padding-top: 0; /* Entfernt den oberen Abstand */
+  padding-top: 10px; /* Entfernt den oberen Abstand */
   padding-bottom: 20px; /* Hält einen unteren Abstand, falls benötigt */
 }
 #home {
   background-color: darkgray; /* Dunkler Hintergrund für 'HOME' */
-}
-
-.second-page {
-  padding: 100px;
-  text-align: center; /* Zentriert den Container, aber die Texte sind individuell ausgerichtet */
-}
-
-.second-page p {
-  font-family: 'Arial', sans-serif; /* Wählen Sie Ihre bevorzugte Schriftart */
-  font-size: 20px; /* Größe der Schrift */
-  margin: 50px 0; /* Größerer Abstand zwischen den Sätzen */
-  width: 80%; /* Bestimmt die Breite jedes Absatzes */
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .left-aligned {
@@ -67,7 +53,7 @@
   background-image: url('bee-1295346_640.png'); /* Stellen Sie sicher, dass dieser Pfad korrekt ist */
   background-size: contain;
   width: 45px; /* Passen Sie die Größe nach Bedarf an */
-  height: 25px; /* Passen Sie die Größe nach Bedarf an */
+  height: 24px; /* Passen Sie die Größe nach Bedarf an */
   transform: translate(-50%, -50%);
   z-index: 1000; /* Sorgt dafür, dass es über anderen Elementen liegt */
   display: none; /* Standardmäßig nicht angezeigt, bis die Maus bewegt wird */
@@ -80,3 +66,42 @@
   font-size: 100px; /* Größe der Schrift */
   line-height: 1.4; /* Zeilenhöhe, um den Zeilenabstand anzupassen */
 }
+/* Grid-Container Stil */
+.text-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr; /* Mittlere Spalten sind doppelt so breit wie die äußeren */
+  grid-template-rows: auto auto auto; /* Drei Zeilen */
+  gap: 20px; /* Abstand zwischen den Zellen */
+  padding: 20px 40px; /* Außenabstand für den Grid-Container */
+}
+
+/* Styling für jeden Satz und spezifische Platzierung bleiben gleich */
+.text-statement {
+  background-color: #fff; /* Weißer Hintergrund */
+  color: #000; /* Schwarzer Text */
+  padding: 10px; /* Innenabstand */
+  text-align: left; /* Textausrichtung links */
+  font-size: 1.5em; /* Größere Schrift */
+}
+
+.text-grid > .text-statement:nth-child(1) {
+  grid-column: 2 / 3; /* Platziert den ersten Satz in der zweiten Spalte */
+  grid-row: 1 / 2;
+}
+
+.text-grid > .text-statement:nth-child(2) {
+  grid-column: 4 / 5; /* Platziert den zweiten Satz in der vierten Spalte */
+  grid-row: 2 / 3;
+}
+
+.text-grid > .text-statement:nth-child(3) {
+  grid-column: 3 / 4; /* Platziert den dritten Satz in der dritten Spalte */
+  grid-row: 3 / 4;
+}
+
+/* Media Query für kleine Bildschirme */
+@media (max-width: 768px) {
+  .text-statement {
+    font-size: 1em; /* Kleinere Schriftgröße für Mobilgeräte */
+    padding: 20px; /* Geringeres Padding für Mobilgeräte */
+  }}

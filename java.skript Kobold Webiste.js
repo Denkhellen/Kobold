@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
   let scrollTimeout = null;
 
   const video = document.getElementById('background-video');
-  const content = document.querySelector('.content');
+  
   const beeCursor = document.getElementById('bee-cursor');
 
-  // Video pausieren, wenn das Scrollen aufhört
+  // Funktion, um das Video zu pausieren
   function pauseVideoOnScrollEnd() {
     if (scrollTimeout !== null) {
       clearTimeout(scrollTimeout);
@@ -21,37 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
       video.play();
     }
     pauseVideoOnScrollEnd();
-
-    // Entfernen der 'hidden' Klasse, wenn gescrollt wird
-    var scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
-    if (scrollPos >= window.innerHeight) {
-      content.classList.remove('hidden');
-    }
   });
 
-  // Bewegen der Biene, die dem Mauszeiger folgt
+  // Event für Mausbewegungen
   document.addEventListener('mousemove', (e) => {
     beeCursor.style.left = e.pageX + 'px';
     beeCursor.style.top = e.pageY + 'px';
-    beeCursor.style.display = 'block';
-  });
-});
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const beeCursor = document.getElementById('bee-cursor');
-
-  document.addEventListener('mousemove', (e) => {
-    beeCursor.style.left = e.pageX + 'px';
-    beeCursor.style.top = e.pageY + 'px';
-    beeCursor.style.display = 'block'; // Stellt sicher, dass die Biene angezeigt wird
+    beeCursor.style.display = 'block'; // Zeigt die Biene an, wenn die Maus bewegt wird
   });
 
+  // Event für Touch-Bewegungen (für Touch-Geräte wie Handys und Tablets)
   document.addEventListener('touchmove', (e) => {
     const touch = e.touches[0];
     beeCursor.style.left = touch.pageX + 'px';
     beeCursor.style.top = touch.pageY + 'px';
-    beeCursor.style.display = 'block'; // Stellt sicher, dass die Biene auch bei Touch angezeigt wird
+    beeCursor.style.display = 'block'; // Zeigt die Biene an, wenn der Finger bewegt wird
     e.preventDefault(); // Verhindert das Scrollen der Seite beim Bewegen
   });
 });
-</script>
+
