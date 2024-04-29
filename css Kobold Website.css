@@ -337,8 +337,8 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   background-size: cover;
 }
 .banner-text {
-  color: white;
-  font-size: 750px; /* Erhöht die Schriftgröße */
+  color: white !important;
+  font-size: 600px !important; /* Erhöht die Schriftgröße und erzwingt die Anwendung dieser Regel */
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
