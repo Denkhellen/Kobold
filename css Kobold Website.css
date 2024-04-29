@@ -75,9 +75,15 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 2fr 1fr; /* Mittlere Spalten sind doppelt so breit wie die äußeren */
   grid-template-rows: auto auto auto; /* Drei Zeilen */
-  gap: 20px; /* Abstand zwischen den Zellen */
-  padding: 20px 40px; /* Außenabstand für den Grid-Container */
+  gap: 200px 20px; /* Abstand zwischen den Zellen */
+  padding: 200px 40px; /* Außenabstand für den Grid-Container */
+
 }
+.grid-item.text h2 {
+  color: rgb(90, 145, 90); /* Grüne Farbe für Überschriften */
+  text-align: left; /* Linksbündige Ausrichtung */
+  margin: 0; /* Entfernt Margin oben und unten */
+  padding: 10px; /* Etwas Platz innen, anpassbar */}
 
 /* Styling für jeden Satz und spezifische Platzierung bleiben gleich */
 .text-statement {
@@ -125,6 +131,18 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
     background-color: rgb(17, 14, 0); /* Hintergrund ab diesem Bereich schwarz */
     color: white;
   }
+
+  .grid-item {
+    padding: 10px;
+    border: 1px solid rgb(17,14, 0); /* Optional: Grenzen zwischen den Grid-Elementen anzeigen */
+  }
+  
+  .grid-item.image img {
+    width: 100%; /* Sorgt dafür, dass Bilder die volle Zellenbreite nutzen */
+    height: auto; /* Behält das ursprüngliche Seitenverhältnis der Bilder bei */
+  }
+
+
  /* Grid-Container Stil */
 .text-grid {
   display: grid;
@@ -177,6 +195,42 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
     padding: 20px 0; /* Vertikales Padding */
     background-color: rgb(17,14, 0);
   }
+
+
+
+  .new-grid h2, .new-grid p {
+    font-family: 'Amatic SC', cursive; /* Setzt Amatic SC als Schriftart */
+  }
+  
+  .new-grid h2 {
+    color: rgb(90, 145, 90);
+    font-size: 70px;
+    margin: 0; /* Entfernt alle Ränder um h2, um es in die Ecke zu setzen */
+  padding: 0; /* Optional, wenn Sie den Text näher an den Rand bringen möchten */
+  font-size: 70px;
+  font-weight: 700; /* Fett gedruckt */
+  }
+  
+  .new-grid p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400; /* Verwendet die normale Schriftstärke für Textabsätze */
+  }
+  .new-grid p {
+    font-size: 25px; /* Erhöht die Schriftgröße der Paragraphen */
+    line-height: 0.2; /* Verbessert die Lesbarkeit durch größeren Zeilenabstand */
+  }
+
+  @media (max-width: 768px) {
+    .new-grid {
+      grid-template-columns: 1fr 2fr 1fr; /* Anpassung für kleinere Bildschirme */
+    }
+    .grid-item.text, .grid-item.image {
+      grid-column: 1 / -1; /* Sorgt dafür, dass Inhalte die gesamte Breite nutzen */
+    }
+  }
+
+
 
 
   body {
