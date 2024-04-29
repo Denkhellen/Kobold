@@ -1,27 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   let scrollTimeout = null;
 
-  const video = document.getElementById('background-video');
-  
-  const beeCursor = document.getElementById('bee-cursor');
-
-  // Funktion, um das Video zu pausieren
-  function pauseVideoOnScrollEnd() {
-    if (scrollTimeout !== null) {
-      clearTimeout(scrollTimeout);
-    }
-    scrollTimeout = setTimeout(() => {
-      video.pause();
-    }, 100); // Warte 100ms nach dem Scrollen, bevor das Video pausiert wird
-  }
-
-  // Scroll-Event, das das Video steuert
-  window.addEventListener('scroll', function() {
-    if (video.paused) {
-      video.play();
-    }
-    pauseVideoOnScrollEnd();
-  });
+   const beeCursor = document.getElementById('bee-cursor');
+});
 
   // Event für Mausbewegungen
   document.addEventListener('mousemove', (e) => {
@@ -38,5 +19,5 @@ document.addEventListener('DOMContentLoaded', function() {
     beeCursor.style.display = 'block'; // Zeigt die Biene an, wenn der Finger bewegt wird
     e.preventDefault(); // Verhindert das Scrollen der Seite beim Bewegen
   });
-});
+
 
