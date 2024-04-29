@@ -230,33 +230,65 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
     }
   }
 
-  .carousel-container {
-    overflow-x: scroll;
-    white-space: nowrap;
-    font-family: 'Amatic SC', sans-serif;
-    -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
-  }
-  .carousel {
-    display: flex;
-    flex-wrap: nowrap; /* Verhindert, dass die Elemente umgebrochen werden */
-  }
+ /* Carousel-Container, der das Karussell und die Punkte umfasst */
+.carousel-container {
+  position: relative; /* für absolute Positionierung der Indikatoren */
+  max-width: 100%;
+  overflow: hidden; /* Versteckt Inhalte, die außerhalb der Grenzen liegen */
+  margin: 0 auto; /* Zentriert das Karussell */
+}
 
-  .carousel-item {
-    display: inline-block;
-    width: 500px; /* Your desired image width */
-    margin-right: 16px; /* Spacing between items */
-  }
-  
-  .carousel-item p {
-    color: white;
-    font-size: 24px; /* Adjust as needed */
-  }
-  
-  .carousel-item img {
-    width: 100%; /* Make the image fill the container */
-    height: auto; /* Keep the aspect ratio */
-    display: block;
-    margin-bottom: 16px; /* Abstand zwischen Bild und Text */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Sorgt für das Einrasten beim Scrollen */
+  -webkit-overflow-scrolling: touch; /* Erlaubt flüssiges Scrollen auf Touch-Geräten */
+  scroll-behavior: smooth;
+}
+
+.carousel-item {
+  flex: 0 0 auto; /* Verhindert, dass die Karussell-Elemente gestreckt oder geschrumpft werden */
+  scroll-snap-align: center; /* Zentriert die Elemente beim Scrollen */
+  display: flex;
+  flex-direction: column; /* Stapelt Bild und Text vertikal */
+  align-items: center; /* Zentriert Kinder horizontal */
+  width: 100%; /* Breite jedes Karussell-Elements */
+  margin: 0 8px; /* Fügt etwas Abstand zwischen den Elementen hinzu */
+  text-align: center; /* Zentriert den Text */
+}
+
+.carousel-item img {
+  max-width: 100%;
+  display: block;
+}
+
+.carousel-item p {
+  color: white;
+  margin: 16px 0;
+}
+
+/* Indikatoren-Container */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: lightgray;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: white;
 }
   
   /* Style adjustments for mobile screens can be added as well */
@@ -276,7 +308,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw; 
+    width: 99vw; 
     height: 390vh;
     background-image: url('Hintergrund.webp'); /* Ersetze 'dein-bild.jpg' durch den Pfad zu deinem Hintergrundbild */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%), url('Hintergrund.webp'); /* Gradient-Overlay hinzugefügt */

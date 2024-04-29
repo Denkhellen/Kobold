@@ -20,4 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
     e.preventDefault(); // Verhindert das Scrollen der Seite beim Bewegen
   });
 
-
+  document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.carousel');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+  
+    carousel.addEventListener('scroll', () => {
+      const scrollLeft = carousel.scrollLeft;
+      const itemWidth = document.querySelector('.carousel-item').offsetWidth;
+      const index = Math.round(scrollLeft / itemWidth);
+      
+      indicators.forEach(indicator => indicator.classList.remove('active'));
+      if (indicators[index]) {
+        indicators[index].classList.add('active');
+      }
+    });
+  });
