@@ -230,75 +230,120 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
     }
   }
 
- /* Carousel-Container, der das Karussell und die Punkte umfasst */
+ /* Übergeordneter Container für das Karussell */
 .carousel-container {
-  position: relative; /* für absolute Positionierung der Indikatoren */
-  max-width: 100%;
-  overflow: hidden; /* Versteckt Inhalte, die außerhalb der Grenzen liegen */
-  margin: 0 auto; /* Zentriert das Karussell */
+  max-width: 100%; /* Stellt sicher, dass der Container nicht breiter als der Bildschirm ist */
+  margin: auto; /* Zentriert den Container */
+  position: relative; /* Für die absolute Positionierung der Indikatoren */
+  overflow: hidden; /* Versteckt gescrollte Bilder */
 }
 
+/* Container für jedes Karussell-Element */
 .carousel {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory; /* Sorgt für das Einrasten beim Scrollen */
-  -webkit-overflow-scrolling: touch; /* Erlaubt flüssiges Scrollen auf Touch-Geräten */
-  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; /* Fügt die Einrastfunktion hinzu */
+  overflow-x: auto; /* Erlaubt horizontales Scrollen */
+  -webkit-overflow-scrolling: touch; /* Verbessert das Scrollen auf Touch-Geräten */
 }
 
+/* Jedes Karussell-Element */
 .carousel-item {
-  flex: 0 0 auto; /* Verhindert, dass die Karussell-Elemente gestreckt oder geschrumpft werden */
-  scroll-snap-align: center; /* Zentriert die Elemente beim Scrollen */
-  display: flex;
-  flex-direction: column; /* Stapelt Bild und Text vertikal */
-  align-items: center; /* Zentriert Kinder horizontal */
-  width: 100%; /* Breite jedes Karussell-Elements */
-  margin: 0 8px; /* Fügt etwas Abstand zwischen den Elementen hinzu */
-  text-align: center; /* Zentriert den Text */
+  scroll-snap-align: center; /* Zentriert Elemente beim Einrasten */
+  flex: 0 0 auto; /* Verhindert, dass die Elemente gestreckt werden */
+  width: 300px; /* Breite des Karussell-Elements */
+  margin-right: 16px; /* Abstand zwischen den Elementen */
+  text-align: center; /* Zentriert den Text innerhalb des Elements */
+  padding: 20px; /* Abstand um das Bild und den Text */
+  box-sizing: border-box;
 }
 
+/* Die Bilder innerhalb des Karussell-Elements */
 .carousel-item img {
-  max-width: 100%;
-  display: block;
+  width: 100%; /* Die Bilder füllen die Breite des Elements */
+  height: auto; /* Behält das Seitenverhältnis bei */
+  margin-bottom: 16px; /* Abstand zwischen Bild und Text */
 }
 
+/* Der Text unter den Bildern */
 .carousel-item p {
   color: white;
-  margin: 16px 0;
+  font-size: 18px; /* Angepasste Schriftgröße für den Text */
 }
 
-/* Indikatoren-Container */
+/* Indikatoren am unteren Rand des Karussells */
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -35px; /* Positioniert unter dem Karussell */
+  left: 50%; /* Zentriert die Indikatoren */
+  transform: translateX(-50%); /* Zentrierung korrigieren */
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .carousel-indicator {
   width: 10px;
   height: 10px;
-  background-color: lightgray;
   border-radius: 50%;
-  margin: 0 5px;
+  background-color: lightgray; /* Farbe der nicht-aktiven Indikatoren */
+  margin: 0 5px; /* Abstand zwischen den Indikatoren */
   cursor: pointer;
 }
 
 .carousel-indicator.active {
-  background-color: white;
+  background-color: white; /* Farbe der aktiven Indikatoren */
 }
-  
-  /* Style adjustments for mobile screens can be added as well */
-  @media (max-width: 768px) {
-    .carousel-item {
-      width: 90%; /* Adjust for smaller screens */
-    }
+
+/* Media Queries für Anpassungen auf kleineren Bildschirmen */
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 90vw; /* Nimmt auf kleineren Bildschirmen mehr Breite ein */
   }
+}
+.full-width-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Zentriert die Kinder horizontal */
+  justify-content: space-between; /* Gibt gleichen Abstand zwischen den Elementen */
+}
 
+.banner {
+  width: 100vw;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px; /* Fügt unten einen kleinen Abstand hinzu */
+  background-size: cover;
+  background-position: center; /* Stellt sicher, dass das Hintergrundbild zentriert ist */
+}
 
+/* Letztes Banner sollte keinen unteren Rand haben */
+.banner:last-child {
+  margin-bottom: 0;
+}
+
+#banner1 {
+  background-image: url('Smell.webp'); /* Ersetze dies mit dem Pfad zu deinem Bild */
+  background-size: cover;
+}
+
+#banner2 {
+  background-image: url('Feel.webp'); /* Ersetze dies mit dem Pfad zu deinem Bild */
+  background-size: cover;
+}
+
+#banner3 {
+  background-image: url('Taste.webp'); /* Ersetze dies mit dem Pfad zu deinem Bild */
+  background-size: cover;
+}
+.banner-text {
+  color: white;
+  font-size: 750px; /* Erhöht die Schriftgröße */
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
   body {
     margin: 0;
     padding: 0;
