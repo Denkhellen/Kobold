@@ -230,7 +230,41 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
     }
   }
 
+  .carousel-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+    font-family: 'Amatic SC', sans-serif;
+    -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+  }
+  .carousel {
+    display: flex;
+    flex-wrap: nowrap; /* Verhindert, dass die Elemente umgebrochen werden */
+  }
 
+  .carousel-item {
+    display: inline-block;
+    width: 500px; /* Your desired image width */
+    margin-right: 16px; /* Spacing between items */
+  }
+  
+  .carousel-item p {
+    color: white;
+    font-size: 24px; /* Adjust as needed */
+  }
+  
+  .carousel-item img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Keep the aspect ratio */
+    display: block;
+    margin-bottom: 16px; /* Abstand zwischen Bild und Text */
+}
+  
+  /* Style adjustments for mobile screens can be added as well */
+  @media (max-width: 768px) {
+    .carousel-item {
+      width: 90%; /* Adjust for smaller screens */
+    }
+  }
 
 
   body {
