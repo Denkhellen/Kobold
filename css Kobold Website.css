@@ -317,10 +317,6 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   background-position: center; /* Stellt sicher, dass das Hintergrundbild zentriert ist */
 }
 
-/* Letztes Banner sollte keinen unteren Rand haben */
-.banner:last-child {
-  margin-bottom: 0;
-}
 
 #banner1 {
   background-image: url('Smell.webp'); /* Ersetze dies mit dem Pfad zu deinem Bild */
@@ -344,6 +340,38 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   left: 50%;
   top: 50%;
 }
+
+/* CSS für den neuen Button */
+.join-button {
+  background-color: rgb(171, 239, 171); /* Grüner Hintergrund */
+  color: white; /* Weiße Schriftfarbe */
+  border: none; /* Kein Rand */
+  padding: 10px 20px; /* Innenabstand */
+  font-size: 200px; /* Schriftgröße */
+  cursor: pointer; /* Zeiger beim Überfahren */
+  transition: background-color 0.3s; /* Übergang für die Hintergrundfarbe */
+}
+
+.join-button:hover {
+  background-color: #f4c3e5; /* Dunklerer Hintergrund beim Hover */
+}
+
+/* Stil für das Bild und den Button */
+.full-width-banner-image {
+  position: relative; /* Position relativ zum Container */
+}
+
+.full-width-banner-image img {
+  width: 100%; /* Bild füllt den Container */
+}
+
+.join-button {
+  position: absolute; /* Position absolut innerhalb des Containers */
+  top: 50%; /* Zentriert vertikal */
+  left: 50%; /* Zentriert horizontal */
+  transform: translate(-50%, -50%); /* Zentriert sowohl horizontal als auch vertikal */
+}
+
   body {
     margin: 0;
     padding: 0;
