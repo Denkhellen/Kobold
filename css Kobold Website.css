@@ -5,10 +5,10 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 .nav-button {
   background-color: lightgray; /* Heller Hintergrund für die meisten Buttons */
   border: none;
-  padding: 10px 20px;
+  padding: 20px 40px;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 16px;}
+  font-size: 35px;}
 
 .nav-button:hover {
   background-color: #707070; /* Hintergrundfarbe der Buttons beim Hover */
@@ -67,7 +67,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   text-align: center; /* Zentriert den Text horizontal */
   font-family: 'Amatic SC', sans-serif; /* Beispiel: Setzt die Schriftart */
   margin-bottom: 250px; /* Setzt den Abstand zwischen dem h1 und dem nachfolgenden Text */
-  font-size: 100px; /* Größe der Schrift */
+  font-size: 140px; /* Größe der Schrift */
   line-height: 1.4; /* Zeilenhöhe, um den Zeilenabstand anzupassen */
 }
 /* Grid-Container Stil */
@@ -196,8 +196,6 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
     background-color: rgb(17,14, 0);
   }
 
-
-
   .new-grid h2, .new-grid p {
     font-family: 'Amatic SC', cursive; /* Setzt Amatic SC als Schriftart */
   }
@@ -240,10 +238,75 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 
 /* Container für jedes Karussell-Element */
 .carousel {
+  position: relative;
+  height: 600px;
+  width: 37%;
+  margin: 0 auto;
+  margin-bottom: 100px; /* Füge einen unteren Abstand hinzu */
+}
+
+.carousel__image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.carousel__track-container {
+  background: #000;
+  height: 100%;
+  position: relative;
+}
+
+.carousel__track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel__button {
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+}
+
+.carousel__button -- left{
+  left: -40px;
+} 
+.carousel__button -- right{
+  right: -40px;
+} 
+.carousel__button img {
+  width: 12px;
+}
+
+.carousel__nav {
   display: flex;
-  scroll-snap-type: x mandatory; /* Fügt die Einrastfunktion hinzu */
-  overflow-x: auto; /* Erlaubt horizontales Scrollen */
-  -webkit-overflow-scrolling: touch; /* Verbessert das Scrollen auf Touch-Geräten */
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background:rgb(253, 252, 251);
+  margin: 0 12px;
+}
+
+.carousel__indicator.current-slide {
+  backround: rgb(178, 178, 177);
 }
 
 /* Jedes Karussell-Element */
@@ -307,7 +370,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 
 .banner {
   width: 100vw;
-  height: 120vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,14 +406,17 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 
 /* CSS für den neuen Button */
 .join-button {
-  background-color: rgb(171, 239, 171); /* Grüner Hintergrund */
+  background-color: rgb(170, 214, 170); /* Grüner Hintergrund */
   color: white; /* Weiße Schriftfarbe */
   border: none; /* Kein Rand */
   padding: 10px 20px; /* Innenabstand */
   font-size: 200px; /* Schriftgröße */
   cursor: pointer; /* Zeiger beim Überfahren */
   transition: background-color 0.3s; /* Übergang für die Hintergrundfarbe */
+  border-radius: 20px; /* Abgerundete Ecken */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Schatten für den Button */
 }
+
 
 .join-button:hover {
   background-color: #f4c3e5; /* Dunklerer Hintergrund beim Hover */
