@@ -105,8 +105,8 @@
 <!-- Carousel direkt unter der Überschrift -->
 <div class="carousel-container" style="grid-column: 1 / -1; grid-row: 7;">
   <div class="carousel">
-    <button class="carousel__button">
-      
+    <button class="carousel__button carousel__button- -left">
+      <img src="Pfeillinks.png" alt="">
     </button>
     <div class="carousel__track-container">
       <ul class="carousel__track">
@@ -133,11 +133,13 @@
             </li>
         </ul>
     </div>
-    <button class="carousel__button">
-
+    <button class="carousel__button carousel__button- -right">
+      <img src="Peilrechts.png" alt="">
     </button>
 
     <div class="carousel__nav">
+      <button class="carousel__indicator"></button>
+      <button class="carousel__indicator"></button>
       <button class="carousel__indicator"></button>
       <button class="carousel__indicator"></button>
       <button class="carousel__indicator"></button>
@@ -147,11 +149,7 @@
 </div>
 <div class="carousel-indicators" style="grid-column: 1 / -1; grid-row: 8;"></div>
 <div class="carousel-indicators">
-  <span class="carousel-indicator"></span>
-  <span class="carousel-indicator"></span>
-  <span class="carousel-indicator"></span>
-  <span class="carousel-indicator"></span>
-  <span class="carousel-indicator active"></span> <!-- Aktiver Punkt für das aktuelle Bild -->
+   <!-- Aktiver Punkt für das aktuelle Bild -->
 </div>
 <div class="full-width-banner-container" style="grid-column: 1 / 6; grid-row: 9;">
   <div class="full-width-banner">
@@ -170,6 +168,7 @@
     <button class="join-button">Join!</button>
   </div>
 </div>
+
 <div id="bee-cursor"></div> <!-- Element für die Biene -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {

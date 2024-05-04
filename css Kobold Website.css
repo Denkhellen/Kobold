@@ -54,7 +54,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 #bee-cursor {
   position: absolute; /* Sorgt dafür, dass das Bild auf dem gesamten Bildschirm positioniert werden kann */
   pointer-events: none; /* Erlaubt Mausklicks durch das Element hindurch */
-  background-image: url('bee-1295346_640.png'); /* Stellen Sie sicher, dass dieser Pfad korrekt ist */
+  background-image: url('bee.png'); /* Stellen Sie sicher, dass dieser Pfad korrekt ist */
   background-size: contain;
   width: 45px; /* Passen Sie die Größe nach Bedarf an */
   height: 24px; /* Passen Sie die Größe nach Bedarf an */
@@ -280,10 +280,10 @@ object-fit: cover;
 
 }
 
-.carousel__button -- left{
+.carousel__button- -left{
   left: -40px;
 } 
-.carousel__button -- right{
+.carousel__button- -right{
   right: -40px;
 } 
 .carousel__button img {

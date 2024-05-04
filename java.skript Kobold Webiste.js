@@ -20,6 +20,29 @@ document.addEventListener('DOMContentLoaded', function() {
     e.preventDefault(); // Verhindert das Scrollen der Seite beim Bewegen
   });
 
+  const track = document.querySelector('.carousel__track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.carousel__button- -right');
+  const prevButton = document.querySelector('.carousel__button- -right');
+  const dotsNav = documen.querySelector('.carousel__nav');
+  const dots = Array.from(dotsNav.children);
+  
+  const slideWidth = slides[0].getBoundingClientRect().width;
+  
+  const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+  }
+  
+  sliedes.forEach(setSlidePosition);
+  
+  nextButton.addEventListener('click', e=> {
+    const currentSlide = track.querySelector('.current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
+    const amountToMove = nextSlide.style.left;
+    track.style.transform = 'translateX(-' + amountToMove + ')';
+  })
+  
+
   document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel');
     const indicators = document.querySelectorAll('.carousel-indicator');
