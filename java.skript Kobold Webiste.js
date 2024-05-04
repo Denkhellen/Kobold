@@ -1,60 +1,53 @@
 document.addEventListener('DOMContentLoaded', function() {
-  let scrollTimeout = null;
+  const beeCursor = document.getElementById('bee-cursor');
 
-   const beeCursor = document.getElementById('bee-cursor');
-});
+  // Bee Cursor sichtbar machen und positionieren
 
-  // Event für Mausbewegungen
-  document.addEventListener('mousemove', (e) => {
+  document.addEventListener('mousemove', function(e) {
+    const beeCursor = document.getElementById('bee-cursor');
     beeCursor.style.left = e.pageX + 'px';
     beeCursor.style.top = e.pageY + 'px';
-    beeCursor.style.display = 'block'; // Zeigt die Biene an, wenn die Maus bewegt wird
+    beeCursor.style.display = 'block';
   });
-
-  // Event für Touch-Bewegungen (für Touch-Geräte wie Handys und Tablets)
-  document.addEventListener('touchmove', (e) => {
+  document.addEventListener('touchmove', function(e) {
     const touch = e.touches[0];
     beeCursor.style.left = touch.pageX + 'px';
     beeCursor.style.top = touch.pageY + 'px';
-    beeCursor.style.display = 'block'; // Zeigt die Biene an, wenn der Finger bewegt wird
-    e.preventDefault(); // Verhindert das Scrollen der Seite beim Bewegen
+    e.preventDefault(); // Verhindert Scrollen beim Bewegen
   });
 
+  // Karussell Funktionalität
   const track = document.querySelector('.carousel__track');
   const slides = Array.from(track.children);
-  const nextButton = document.querySelector('.carousel__button- -right');
-  const prevButton = document.querySelector('.carousel__button- -right');
-  const dotsNav = documen.querySelector('.carousel__nav');
+  const nextButton = document.querySelector('.carousel__button--right');
+  const prevButton = document.querySelector('.carousel__button--left');
+  const dotsNav = document.querySelector('.carousel__nav');
   const dots = Array.from(dotsNav.children);
-  
+
   const slideWidth = slides[0].getBoundingClientRect().width;
-  
-  const setSlidePosition = (slide, index) => {
+
+  // Position der Slides
+  slides.forEach((slide, index) => {
     slide.style.left = slideWidth * index + 'px';
-  }
-  
-  sliedes.forEach(setSlidePosition);
-  
-  nextButton.addEventListener('click', e=> {
+  });
+
+  // Navigationsbuttons
+  nextButton.addEventListener('click', e => {
     const currentSlide = track.querySelector('.current-slide');
     const nextSlide = currentSlide.nextElementSibling;
     const amountToMove = nextSlide.style.left;
     track.style.transform = 'translateX(-' + amountToMove + ')';
-  })
-  
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.carousel');
-    const indicators = document.querySelectorAll('.carousel-indicator');
-  
-    carousel.addEventListener('scroll', () => {
-      const scrollLeft = carousel.scrollLeft;
-      const itemWidth = document.querySelector('.carousel-item').offsetWidth;
-      const index = Math.round(scrollLeft / itemWidth);
-      
-      indicators.forEach(indicator => indicator.classList.remove('active'));
-      if (indicators[index]) {
-        indicators[index].classList.add('active');
-      }
-    });
   });
+
+  // Update aktiver Dot
+  carousel.addEventListener('scroll', () => {
+    const scrollLeft = carousel.scrollLeft;
+    const itemWidth = document.querySelector('.carousel-item').offsetWidth;
+    const index = Math.round(scrollLeft / itemWidth);
+
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[index]) {
+      dots[index].classList.add('active');
+    }
+  });
+});

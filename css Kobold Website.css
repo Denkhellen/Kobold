@@ -52,15 +52,14 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 }
 /* Stil für die Biene */
 #bee-cursor {
-  position: absolute; /* Sorgt dafür, dass das Bild auf dem gesamten Bildschirm positioniert werden kann */
-  pointer-events: none; /* Erlaubt Mausklicks durch das Element hindurch */
-  background-image: url('bee.png'); /* Stellen Sie sicher, dass dieser Pfad korrekt ist */
+  position: fixed; /* Stellen Sie sicher, dass es 'fixed' und nicht 'absolute' ist */
+  pointer-events: none;
+  width: 45px;
+  height: 24px;
+  background-image: url('bee.png');
   background-size: contain;
-  width: 45px; /* Passen Sie die Größe nach Bedarf an */
-  height: 24px; /* Passen Sie die Größe nach Bedarf an */
-  transform: translate(-50%, -50%);
-  z-index: 1000; /* Sorgt dafür, dass es über anderen Elementen liegt */
-  display: none; /* Standardmäßig nicht angezeigt, bis die Maus bewegt wird */
+  display: block;  /* Wird durch JavaScript zu 'block' geändert */
+  z-index: 10000; /* Hoch genug, um über alles zu sein */
 }
 
 .title-container h1 {
