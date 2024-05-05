@@ -103,51 +103,59 @@
 </div>
 
 <!-- Carousel direkt unter der Überschrift -->
-<div class="carousel-container" style="grid-column: 1 / -1; grid-row: 7;">
-  <div class="carousel">
-    <button class="carousel__button carousel__button- -left">
-      <img src="Pfeillinks.png" alt="">
-    </button>
-    <div class="carousel__track-container">
-      <ul class="carousel__track">
+<div class="slideshow-container" style="grid-column: 1 / -1; grid-row: 7;">
+  <div class="slideshow-container">
+    
 
-        <li class="carousel__slide">
-          <img class="carousel__image" src="Binefrau.webp" alt="Bild 1">
-      <p>Hello, I'm Buzz, a bee creature who manages the bustling activities at the Floral Meadow Café. I keep our garden humming with the sweetest melodies and the freshest nectar.</p>
-          </li>
-        <li class="carousel__slide">
-          <img class="carousel__image" src="Dachs.webp" alt="Bild 2">
-           <p>Hello, I'm Rascal, a raccoon creature who oversees the lively gatherings at Community Hollow. I ensure every event is filled with mischief and camaraderie.</p>
-          </li>
-          <li class="carousel__slide">
-            <img class="carousel__image" src="Reh.webp" alt="Bild 2">
-          <p>Hello, I'm Lila, a deer creature who curates the serene collections at the Mystic Meadow Library. I guide visitors through tales as ancient and deep as the forest itself.</p>
-        </li>
-        <li class="carousel__slide">
-          <img class="carousel__image" src="Fuchs.webp" alt="Bild 2">
-    <p>Hello, I'm Ember, a fox spirit and guide at the Enchanted Theater in the Whispering Forest. I share ancient forest magic with visitors during our magical twilight performances.</p>
-          </li>
-          <li class="carousel__slide">
-            <img class="carousel__image" src="Schmetterling.webp" alt="Bild 2">
-    <p>Hello, I'm Flutter, a butterfly creature who orchestrates the vibrant nightlife at Starlight Cinema. I ensure every film under the moonlit sky is a fluttering spectacle of light and color.</p>
-            </li>
-        </ul>
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="number">1 / 5</div>
+        <img src="Binefrau.webp" style="width:100%">
+        <div class="schrift">Hello, I'm Buzz, a bee creature who manages the bustling activities at the Floral Meadow Café. I keep our garden humming with the sweetest melodies and the freshest nectar.</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="number">2 / 5</div>
+        <img src="Dachs.webp" style="width:100%">
+        <div class="schrift">Hello, I'm Rascal, a raccoon creature who oversees the lively gatherings at Community Hollow. I ensure every event is filled with mischief and camaraderie.</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="number">3 / 5</div>
+        <img src="Reh.webp" style="width:100%">
+        <div class="schrift">Hello, I'm Lila, a deer creature who curates the serene collections at the Mystic Meadow Library. I guide visitors through tales as ancient and deep as the forest itself.</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="number">4 / 5</div>
+        <img src="Fuchs.webp" style="width:100%">
+        <div class="schrift">Hello, I'm Ember, a fox spirit and guide at the Enchanted Theater in the Whispering Forest. I share ancient forest magic with visitors during our magical twilight performances.</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="number">5 / 5</div>
+        <img src="Schmetterling.webp" style="width:100%">
+        <div class="schrift">Hello, I'm Flutter, a butterfly creature who orchestrates the vibrant nightlife at Starlight Cinema. I ensure every film under the moonlit sky is a fluttering spectacle of light and color.</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    <button class="carousel__button carousel__button- -right">
-      <img src="Peilrechts.png" alt="">
-    </button>
-
-    <div class="carousel__nav">
-      <button class="carousel__indicator"></button>
-      <button class="carousel__indicator"></button>
-      <button class="carousel__indicator"></button>
-      <button class="carousel__indicator"></button>
-      <button class="carousel__indicator"></button>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
     </div>
 
-   
+
 </div>
-<div class="carousel-indicators" style="grid-column: 1 / -1; grid-row: 8;"></div>
+<div class="space" style="grid-column: 1 / -1; grid-row: 8;"></div>
 <div class="carousel-indicators">
    <!-- Aktiver Punkt für das aktuelle Bild -->
 </div>
