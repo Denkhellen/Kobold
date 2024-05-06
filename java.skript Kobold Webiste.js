@@ -57,3 +57,15 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
   
+
+
+let cursor=document.querySelector('.ball');
+
+document.onmousemove = function(e) {  
+    let x= e.clientX;
+    let y= e.clientY;
+
+    cursor.style.left= x+'px';
+    cursor.style.top= y+'px';
+};
+
