@@ -12,6 +12,15 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   pointer-events: none;
   position: fixed;
   }
+/* Stil für die Biene */
+#bee-cursor {
+  position: fixed; /* Stellen Sie sicher, dass es 'fixed' und nicht 'absolute' ist */
+  pointer-events: none;
+  width: 45px;
+  height: 24px;
+  background-image: url('bee.png');
+  background-size: contain;
+ }
 
 .nav-button {
   background-color: lightgray; /* Heller Hintergrund für die meisten Buttons */
@@ -61,17 +70,6 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   text-align: right; /* Rechtsbündige Ausrichtung für bestimmte Absätze */
   padding-right: 20px; /* Abstand vom rechten Rand */
 }
-/* Stil für die Biene */
-#bee-cursor {
-  position: fixed; /* Stellen Sie sicher, dass es 'fixed' und nicht 'absolute' ist */
-  pointer-events: none;
-  width: 45px;
-  height: 24px;
-  background-image: url('bee.png');
-  background-size: contain;
-  display: block;  /* Wird durch JavaScript zu 'block' geändert */
-  z-index: 10000; /* Hoch genug, um über alles zu sein */
-}
 
 .title-container h1 {
   text-align: center; /* Zentriert den Text horizontal */
@@ -89,11 +87,16 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   padding: 200px 40px; /* Außenabstand für den Grid-Container */
 
 }
+
+
 .grid-item.text h2 {
   color: rgb(90, 145, 90); /* Grüne Farbe für Überschriften */
   text-align: left; /* Linksbündige Ausrichtung */
   margin: 0; /* Entfernt Margin oben und unten */
-  padding: 10px; /* Etwas Platz innen, anpassbar */}
+  padding: 10px; /* Etwas Platz innen, anpassbar */
+  justify-content: flex-start; /* Startet den Inhalt am Anfang des Containers (oben) */
+  align-items: flex-start; /* Startet den Inhalt am Anfang des Containers (links) */
+}
 
 /* Styling für jeden Satz und spezifische Platzierung bleiben gleich */
 .text-statement {
@@ -437,3 +440,27 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   }
   
   /* Deine bestehenden CSS-Regeln für das Grid */
+  
+  .footer {
+    background-color: rgb(17,14, 0); /* Dunkelgrauer Hintergrund */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-icons {
+    display: inline-block;
+  }
+  
+  .social-icon {
+    margin: 0 10px;
+    color: rgb(90, 145, 90); /* Weiße Icons */
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s; /* Glatter Farbwechsel und Transformation */
+  }
+  
+  .social-icon:hover {
+    color: #af4c8c; /* Grüne Farbe beim Hover */
+    transform: scale(1.1); /* Vergrößern des Icons */
+  }
+  
+  /* Font Awesome muss eingebunden werden */

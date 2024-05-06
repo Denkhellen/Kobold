@@ -6,12 +6,13 @@
 <title>Little Ones World</title>
 <link rel="stylesheet" href="css Kobold Website.css">
 </head>
+
 <body>
  <!-- Hintergrundbild -->
  <div class="background-image"></div>
 <div class="header">
   
- 
+  
 
   <nav class="navbar">
     <button class="nav-button" id="home">HOME</button> <!-- Ändern in Button -->
@@ -26,6 +27,7 @@
   <head>
     <!-- Weblinks zu den Schriftarten hinzufügen -->
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
   </head>
 </div>
 
@@ -175,27 +177,19 @@
 </div>
 
 <div class="ball"></div>
- 
-<div id="bee-cursor"></div> <!-- Element für die Biene -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const beeCursor = document.getElementById('bee-cursor');
-  
-    // Event für Mausbewegungen
-    document.addEventListener('mousemove', (e) => {
-      beeCursor.style.left = e.pageX + 'px';
-      beeCursor.style.top = e.pageY + 'px';
-    });
-  
-    // Event für Touch-Bewegungen (für Touch-Geräte wie Handys und Tablets)
-    document.addEventListener('touchmove', (e) => {
-      const touch = e.touches[0];
-      beeCursor.style.left = touch.pageX + 'px';
-      beeCursor.style.top = touch.pageY + 'px';
-      e.preventDefault(); // Verhindert das Scrollen der Seite beim Bewegen
-    });
-  });
-  </script>
+<div id="bee-cursor"></div> 
+
+<div class="footer-container" style="grid-column: 1 / 6; grid-row: 10;">
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://instagram.com" class="social-icon" id="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com" class="social-icon" id="facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" class="social-icon" id="twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://linkedin.com" class="social-icon" id="linkedin"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+</div>
+
 
 <script src="java.skript Kobold Webiste.js"></script> <!-- Stellen Sie sicher, dass der Pfad korrekt ist -->
 

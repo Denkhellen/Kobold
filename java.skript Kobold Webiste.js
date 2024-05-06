@@ -2,20 +2,27 @@ document.addEventListener('DOMContentLoaded', function() {
   const beeCursor = document.getElementById('bee-cursor');
 
   // Bee Cursor sichtbar machen und positionieren
-
+  let cursor=document.querySelector('.bee-cursor');
   document.addEventListener('mousemove', function(e) {
     const beeCursor = document.getElementById('bee-cursor');
     beeCursor.style.left = e.pageX + 'px';
     beeCursor.style.top = e.pageY + 'px';
-    beeCursor.style.display = 'block';
-  });
+      });
   document.addEventListener('touchmove', function(e) {
-    const touch = e.touches[0];
-    beeCursor.style.left = touch.pageX + 'px';
-    beeCursor.style.top = touch.pageY + 'px';
-    e.preventDefault(); // Verhindert Scrollen beim Bewegen
-  });
+    beeCursor.style.left = X + 'px';
+    beeCursor.style.top = Y + 'px';
+     });
 });
+
+let cursor=document.querySelector('.ball');
+
+document.onmousemove = function(e) {  
+    let x= e.clientX;
+    let y= e.clientY;
+
+    cursor.style.left= x+'px';
+    cursor.style.top= y+'px';
+};
 
 document.addEventListener('DOMContentLoaded', function() {
   let slideIndex = 1;
@@ -58,14 +65,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
   
 
-
-let cursor=document.querySelector('.ball');
-
-document.onmousemove = function(e) {  
-    let x= e.clientX;
-    let y= e.clientY;
-
-    cursor.style.left= x+'px';
-    cursor.style.top= y+'px';
-};
 
