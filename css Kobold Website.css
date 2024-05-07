@@ -444,19 +444,25 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   .footer {
     background-color: rgb(17,14, 0); /* Dunkelgrauer Hintergrund */
     padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  
+
   .social-icons {
-    display: inline-block;
-  }
-  
-  .social-icon {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Füllt die Breite aus */
+    margin-bottom: 20px; /* Abstand zu den darunterliegenden Elementen */
+}
+
+.social-icon {
     margin: 0 10px;
-    color: rgb(90, 145, 90); /* Weiße Icons */
+    color: rgb(90, 145, 90);
     font-size: 24px;
-    transition: color 0.3s, transform 0.3s; /* Glatter Farbwechsel und Transformation */
-  }
+    transition: color 0.3s, transform 0.3s;
+}
+
   
   .social-icon:hover {
     color: #af4c8c; /* Grüne Farbe beim Hover */
@@ -464,3 +470,49 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   }
   
   /* Font Awesome muss eingebunden werden */
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    width: 100%; /* Nutzt die volle Breite */
+    justify-content: space-around; /* Verteilt den Raum gleichmäßig */
+}
+
+.footer-video {
+    width: 30%; /* Erhöht die Breite des Videos */
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.footer-column {
+    margin: 0 20px; /* Gleichmäßiger Abstand zwischen den Spalten */
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 20px; /* Größere Schrift für Überschriften */
+}
+
+.footer-column ul li {
+    font-size: 16px; /* Größere Schrift für Listenelemente */
+    padding-left: 30px;
+    text-align: left;
+    position: relative;
+}
+
+.footer-copy {
+    width: 100%;
+    text-align: left; /* Linksbündige Ausrichtung des Copyright-Textes */
+    padding: 10px 20px;
+    font-size: 12px;
+}
