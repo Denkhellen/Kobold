@@ -3,24 +3,25 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   /* Füge alle Selektoren hinzu, die die Textelemente auf deiner Website betreffen */
 }
 .ball{
-  background-image: linear-gradient(90deg, rgba(243, 190, 226, 0.708) 0%, rgba(121, 9, 110, 0.447) 0%, rgba(201, 25, 145, 0.502) 60%, rgba(255, 0, 187, 0.242) 97%);
+  background-image: linear-gradient(90deg, rgba(223, 32, 163, 0.708) 0%, rgba(169, 68, 161, 0.548) 0%, rgba(244, 4, 168, 0.502) 60%, rgba(202, 72, 167, 0.612) 97%);
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  box-shadow: 2px 2px 17px 10px rgba(229, 35, 158, 0.73);
+  box-shadow: 2px 2px 17px 10px rgba(229, 35, 158, 0.452);
   transition: 0.1s;
   pointer-events: none;
   position: fixed;
   }
-/* Stil für die Biene */
+  
+/*
 #bee-cursor {
-  position: fixed; /* Stellen Sie sicher, dass es 'fixed' und nicht 'absolute' ist */
+  
   pointer-events: none;
   width: 45px;
   height: 24px;
   background-image: url('bee.png');
   background-size: contain;
- }
+ }*/
 
  .nav-button {
   background-color: transparent; /* Kein Hintergrund */
@@ -109,7 +110,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 /* Styling für jeden Satz und spezifische Platzierung bleiben gleich */
 .text-statement {
 
-  color: #faf8f8; /* Schwarzer Text */
+  color: #faf8f8; 
   padding: 10px; /* Innenabstand */
   text-align: left; /* Textausrichtung links */
   font-size: 3em; /* Größere Schrift */
@@ -145,7 +146,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   
   .new-grid {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr 3fr 1fr; /* Anpassung der Spaltenbreiten */
+    grid-template-columns: 1fr 3fr 0.2fr 3fr 1fr; /* Anpassung der Spaltenbreiten */
     grid-template-rows: repeat(7, auto); /* Sieben Zeilen */
     gap: 20px;
     padding: 20px;
@@ -360,6 +361,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
  
   background-position: center; /* Stellt sicher, dass das Hintergrundbild zentriert ist */
 }
+
 
 
 #banner1 {
