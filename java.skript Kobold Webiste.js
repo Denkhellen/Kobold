@@ -64,12 +64,5 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
   
-window.addEventListener('scroll', function() {
-  const banners = document.querySelectorAll('.banner');
-  banners.forEach(banner => {
-    const speed = banner.getAttribute('data-speed');
-    const yPos = -(window.pageYOffset / speed);
-    banner.style.backgroundPosition = `center ${yPos}px`;
-  });
-});
+
 

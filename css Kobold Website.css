@@ -63,7 +63,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 .header {
   position: relative; /* Macht den Header zum Bezugspunkt für die absolute Positionierung der Navbar */
   text-align: center; /* Zentriert den Text im Header */
-  padding-top: 250px; /* Entfernt den oberen Abstand */
+  padding-top: 150px; /* Entfernt den oberen Abstand */
   padding-bottom: 20px; /* Hält einen unteren Abstand, falls benötigt */
 }
 
@@ -429,7 +429,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
     top: 0;
     left: 0;
     width: 99vw; 
-    height: 390vh;
+    height: 400vh;
     background-image: url('Hintergrund.webp'); /* Ersetze 'dein-bild.jpg' durch den Pfad zu deinem Hintergrundbild */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%), url('Hintergrund.webp'); /* Gradient-Overlay hinzugefügt */
     background-size: cover;
