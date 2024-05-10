@@ -22,34 +22,43 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   background-size: contain;
  }
 
-.nav-button {
-  background-color: lightgray; /* Heller Hintergrund für die meisten Buttons */
+ .nav-button {
+  background-color: transparent; /* Kein Hintergrund */
   border: none;
   padding: 20px 40px;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 35px;}
-
-.nav-button:hover {
-  background-color: #707070; /* Hintergrundfarbe der Buttons beim Hover */
+  font-size: 35px;
+  color: white; /* Weiße Schrift */
+  transition: background-color 0.3s, color 0.3s; /* Glatte Farb- und Hintergrundübergänge */
 }
 
+.nav-button:hover {
+  background-color: transparent; /* Optional: Hintergrund beim Hover, wenn gewünscht */
+  text-decoration: underline; /* Unterstreichen beim Hover */
+}
+#home {
+  background-color: transparent; /* Kein spezieller Hintergrund für 'HOME' */
+  color: white; /* Weiße Schrift speziell für 'HOME' */
+}
 .title-container {
   margin: 15px 0; /* Abstand oben und unten vom Titel-Container */
   padding: 15px;
 }
 
 .navbar {
-  position: absolute; /* Positionierung relativ zum nächstgelegenen positionierten Ancestor (hier .header) */
-  top: 25px; /* Setzt die Navbar ganz nach oben */
-  left: 50%; /* Zentriert die Navbar horizontal */
-  transform: translateX(-50%); /* Feinjustierung der Zentrierung */
-  width: 100%; /* Stellt sicher, dass die Navbar die volle Breite hat, wenn notwendig */
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   display: flex;
-  justify-content: center; /* Zentriert die Buttons horizontal */
-  gap: 5px; /* Gibt einen Abstand zwischen den Buttons */
-  padding: 10px 20px; /* Gibt einen inneren Abstand */
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 20px;
+  color: white; /* Weiße Schrift für die gesamte Navbar */
 }
+
 
 .header {
   position: relative; /* Macht den Header zum Bezugspunkt für die absolute Positionierung der Navbar */
@@ -57,9 +66,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   padding-top: 250px; /* Entfernt den oberen Abstand */
   padding-bottom: 20px; /* Hält einen unteren Abstand, falls benötigt */
 }
-#home {
-  background-color: darkgray; /* Dunkler Hintergrund für 'HOME' */
-}
+
 
 .left-aligned {
   text-align: left; /* Linksbündige Ausrichtung für bestimmte Absätze */
@@ -77,6 +84,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   margin-bottom: 250px; /* Setzt den Abstand zwischen dem h1 und dem nachfolgenden Text */
   font-size: 140px; /* Größe der Schrift */
   line-height: 1.4; /* Zeilenhöhe, um den Zeilenabstand anzupassen */
+  color: white; /* Weiße Schrift für die gesamte Navbar */
 }
 /* Grid-Container Stil */
 .text-grid {
@@ -101,7 +109,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 /* Styling für jeden Satz und spezifische Platzierung bleiben gleich */
 .text-statement {
 
-  color: #000; /* Schwarzer Text */
+  color: #faf8f8; /* Schwarzer Text */
   padding: 10px; /* Innenabstand */
   text-align: left; /* Textausrichtung links */
   font-size: 3em; /* Größere Schrift */
@@ -348,6 +356,8 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   position: relative;
   margin-bottom: 10px; /* Fügt unten einen kleinen Abstand hinzu */
   background-size: cover;
+  transform-style: preserve-3d;
+ 
   background-position: center; /* Stellt sicher, dass das Hintergrundbild zentriert ist */
 }
 
