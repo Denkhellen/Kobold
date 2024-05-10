@@ -381,7 +381,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   color: white; /* Weiße Schriftfarbe */
   border: none; /* Kein Rand */
   padding: 10px 20px; /* Innenabstand */
-  font-size: 200px; /* Schriftgröße */
+  font-size: 45px; /* Schriftgröße */
   cursor: pointer; /* Zeiger beim Überfahren */
   transition: background-color 0.3s; /* Übergang für die Hintergrundfarbe */
   border-radius: 20px; /* Abgerundete Ecken */
