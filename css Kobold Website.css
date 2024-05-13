@@ -209,11 +209,11 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   .grid-header h1 {
     grid-column-start: 1; /* Startet in Spalte 2 */
     grid-column-end: 6; /* Endet in Spalte 4 */
-    font-size: 130px; /* Doppelte Größe der h2 Schrift */
+    font-size: 160px; /* Doppelte Größe der h2 Schrift */
     color: rgb(90, 145, 90); /* Grüne Farbe, wie Ihre h2 Überschriften */
     font-family: 'Amatic SC', cursive; /* Amatic SC Schriftart */
     text-align: center; /* Zentriert den Text */
-    margin: 0; /* Entfernt Margin */
+    margin: 50; /* Entfernt Margin */
     padding: 20px 0; /* Vertikales Padding */
     background-color: rgb(17,14, 0);
   }
@@ -223,22 +223,24 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   }
   
   .new-grid h2 {
-    color: rgb(90, 145, 90);
-    font-size: 70px;
-    margin: 0; /* Entfernt alle Ränder um h2, um es in die Ecke zu setzen */
-  padding: 0; /* Optional, wenn Sie den Text näher an den Rand bringen möchten */
-  font-size: 70px;
-  font-weight: 700; /* Fett gedruckt */
+    color: rgb(90, 145, 90); /* Grüne Farbe */
+    font-size: 80px; /* Große Schriftgröße für Überschriften */
+    margin: 0; /* Entfernt alle Ränder */
+    padding: 0; /* Kein zusätzliches Padding */
+    font-weight: 700; /* Fett gedruckt */
+    font-family: 'Amatic SC', cursive; /* Amatic SC Schriftart */
   }
   
+  
   .new-grid p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
     font-weight: 400; /* Verwendet die normale Schriftstärke für Textabsätze */
+    font-family: 'Amatic SC', sans-serif; /* Setzt Amatic SC als Schriftart */
   }
   .new-grid p {
-    font-size: 25px; /* Erhöht die Schriftgröße der Paragraphen */
-    line-height: 0.2; /* Verbessert die Lesbarkeit durch größeren Zeilenabstand */
+    font-size: 35px; /* Erhöht die Schriftgröße der Paragraphen */
+    line-height: 0.5; /* Verbessert die Lesbarkeit durch größeren Zeilenabstand */
   }
 
   @media (max-width: 768px) {
