@@ -4,14 +4,14 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 }
 .ball{
   background-image: linear-gradient(90deg, rgba(223, 32, 163, 0.708) 0%, rgba(169, 68, 161, 0.548) 0%, rgba(244, 4, 168, 0.502) 60%, rgba(202, 72, 167, 0.612) 97%);
-  height: 50px;
-  width: 50px;
+  height: 3.125rem; /* War 50px */
+  width: 3.125rem; /* War 50px */
   border-radius: 50%;
-  box-shadow: 2px 2px 17px 10px rgba(229, 35, 158, 0.452);
+  box-shadow: 0.125rem 0.125rem 1.0625rem 0.625rem rgba(229, 35, 158, 0.452); /* War 2px 2px 17px 10px */
   transition: 0.1s;
   pointer-events: none;
   position: fixed;
-  }
+}
   
 /*
 #bee-cursor {
@@ -26,10 +26,10 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
  .nav-button {
   background-color: transparent; /* Kein Hintergrund */
   border: none;
-  padding: 20px 40px;
+  padding: 1.25rem 2.5rem;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 35px;
+  font-size: 2.1875rem;
   color: white; /* Weiße Schrift */
   transition: background-color 0.3s, color 0.3s; /* Glatte Farb- und Hintergrundübergänge */
 }
@@ -43,20 +43,20 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   color: white; /* Weiße Schrift speziell für 'HOME' */
 }
 .title-container {
-  margin: 15px 0; /* Abstand oben und unten vom Titel-Container */
-  padding: 15px;
+  margin: 0.9375rem 0; /* War 15px 0 */
+  padding: 0.9375rem; /* War 15px */
 }
 
 .navbar {
   position: absolute;
-  top: 25px;
+  top: 1.5625rem;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 5px;
-  padding: 10px 20px;
+  gap: 0.3125rem;
+  padding: 0.625rem 1.25rem;
   color: white; /* Weiße Schrift für die gesamte Navbar */
 }
 
@@ -64,26 +64,26 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 .header {
   position: relative; /* Macht den Header zum Bezugspunkt für die absolute Positionierung der Navbar */
   text-align: center; /* Zentriert den Text im Header */
-  padding-top: 150px; /* Entfernt den oberen Abstand */
-  padding-bottom: 20px; /* Hält einen unteren Abstand, falls benötigt */
+  padding-top: 9.375rem; /* War 150px */
+  padding-bottom: 1.25rem; /* War 20px *//* Hält einen unteren Abstand, falls benötigt */
 }
 
 
 .left-aligned {
   text-align: left; /* Linksbündige Ausrichtung für bestimmte Absätze */
-  padding-left: 20px; /* Abstand vom linken Rand */
+  padding-left: 1.25rem; /* Abstand vom linken Rand */
 }
 
 .right-aligned {
   text-align: right; /* Rechtsbündige Ausrichtung für bestimmte Absätze */
-  padding-right: 20px; /* Abstand vom rechten Rand */
+  padding-right: 1.25rem; /* Abstand vom rechten Rand */
 }
 
 .title-container h1 {
   text-align: center; /* Zentriert den Text horizontal */
   font-family: 'Amatic SC', sans-serif; /* Beispiel: Setzt die Schriftart */
-  margin-bottom: 250px; /* Setzt den Abstand zwischen dem h1 und dem nachfolgenden Text */
-  font-size: 140px; /* Größe der Schrift */
+  margin-bottom: 15.625rem; /* War 250px */
+  font-size: 8.75rem; /* War 140px */
   line-height: 1.4; /* Zeilenhöhe, um den Zeilenabstand anzupassen */
   color: white; /* Weiße Schrift für die gesamte Navbar */
 }
@@ -92,8 +92,8 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 2fr 1fr; /* Mittlere Spalten sind doppelt so breit wie die äußeren */
   grid-template-rows: auto auto auto; /* Drei Zeilen */
-  gap: 200px 20px; /* Abstand zwischen den Zellen */
-  padding: 200px 40px; /* Außenabstand für den Grid-Container */
+  gap: 12.5rem 1.25rem; /* War 200px 20px */
+  padding: 12.5rem 2.5rem; /* Außenabstand für den Grid-Container */
 
 }
 
@@ -102,7 +102,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   color: rgb(90, 145, 90); /* Grüne Farbe für Überschriften */
   text-align: left; /* Linksbündige Ausrichtung */
   margin: 0; /* Entfernt Margin oben und unten */
-  padding: 10px; /* Etwas Platz innen, anpassbar */
+  padding: 0.625rem; /* Etwas Platz innen, anpassbar */
   justify-content: flex-start; /* Startet den Inhalt am Anfang des Containers (oben) */
   align-items: flex-start; /* Startet den Inhalt am Anfang des Containers (links) */
 }
@@ -111,7 +111,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 .text-statement {
 
   color: #faf8f8; 
-  padding: 10px; /* Innenabstand */
+  padding: 0.625rem; /* Innenabstand */
   text-align: left; /* Textausrichtung links */
   font-size: 3em; /* Größere Schrift */
   font-family: 'Amatic SC', sans-serif; /* Setzt die Schriftart */
@@ -137,7 +137,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 @media (max-width: 768px) {
   .text-statement {
     font-size: 1em; /* Kleinere Schriftgröße für Mobilgeräte */
-    padding: 20px; /* Geringeres Padding für Mobilgeräte */
+    padding: 1.25rem; /* Geringeres Padding für Mobilgeräte */
   }}
  
   .content-below {
@@ -148,38 +148,35 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
     display: grid;
     grid-template-columns: 1fr 3fr 0.2fr 3fr 1fr; /* Anpassung der Spaltenbreiten */
     grid-template-rows: repeat(7, auto); /* Sieben Zeilen */
-    gap: 20px;
-    padding: 20px;
+    gap: 1.25rem;
+    padding: 1.25rem;
     background-color: rgb(17, 14, 0); /* Hintergrund ab diesem Bereich schwarz */
     color: white;
   }
 
   .grid-item {
-    padding: 10px;
-    border: 1px solid rgb(17,14, 0); /* Optional: Grenzen zwischen den Grid-Elementen anzeigen */
+    padding: 0.625rem; /* War 10px */
+    border: 0.0625rem solid rgb(17, 14, 0); /* War 1px */
   }
   
   .grid-item.image img {
     width: 100%; /* Sorgt dafür, dass Bilder die volle Zellenbreite nutzen */
     height: auto; /* Behält das ursprüngliche Seitenverhältnis der Bilder bei */
   }
-
-
- /* Grid-Container Stil */
-.text-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr 2fr 1fr; /* Mittlere Spalten sind doppelt so breit wie die äußeren */
-  grid-template-rows: auto auto auto; /* Drei Zeilen */
-  gap: 200px 20px; /* Abstand zwischen den Zellen */
-  padding: 200px 40px; /* Außenabstand für den Grid-Container */
-}
-
   
-  .grid-item {
-    padding: 10px;
-    border: 1px solid rgb(17,14, 0); /* Optional: Grenzen zwischen den Grid-Elementen anzeigen */
+  .text-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr; /* Spaltenlayout bleibt unverändert */
+    grid-template-rows: auto auto auto; /* Zeilenlayout bleibt unverändert */
+    gap: 12.5rem 1.25rem; /* War 200px 20px */
+    padding: 12.5rem 2.5rem; /* War 200px 40px */
   }
   
+  .grid-item {
+    padding: 0.625rem; /* Konsistenz der Padding-Angabe */
+    border: 0.0625rem solid rgb(17, 14, 0); /* War 1px, konsistent umgerechnet */
+  }
+
   .grid-item.image img {
     width: 100%; /* Sorgt dafür, dass Bilder die volle Zellenbreite nutzen */
     height: auto; /* Behält das ursprüngliche Seitenverhältnis der Bilder bei */
@@ -206,40 +203,35 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
     grid-column: 2 / 5; /* Streckt die Überschrift von Spalte 2 bis 4 */
   }
   
-  .grid-header h1 {
-    grid-column-start: 1; /* Startet in Spalte 2 */
+ .grid-header h1 {
+    grid-column-start: 1; /* Startet in Spalte 2 - Anmerkung: Kommentar aktualisieren */
     grid-column-end: 6; /* Endet in Spalte 4 */
-    font-size: 160px; /* Doppelte Größe der h2 Schrift */
-    color: rgb(90, 145, 90); /* Grüne Farbe, wie Ihre h2 Überschriften */
-    font-family: 'Amatic SC', cursive; /* Amatic SC Schriftart */
-    text-align: center; /* Zentriert den Text */
-    margin: 50; /* Entfernt Margin */
-    padding: 20px 0; /* Vertikales Padding */
-    background-color: rgb(17,14, 0);
-  }
-
-  .new-grid h2, .new-grid p {
-    font-family: 'Amatic SC', cursive; /* Setzt Amatic SC als Schriftart */
-  }
-  
-  .new-grid h2 {
+    font-size: 10rem; /* War 160px */
     color: rgb(90, 145, 90); /* Grüne Farbe */
-    font-size: 80px; /* Große Schriftgröße für Überschriften */
-    margin: 0; /* Entfernt alle Ränder */
-    padding: 0; /* Kein zusätzliches Padding */
-    font-weight: 700; /* Fett gedruckt */
-    font-family: 'Amatic SC', cursive; /* Amatic SC Schriftart */
-  }
-  
-  
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    margin: 3.125rem 0; /* War 50px */
+    padding: 1.25rem 0; /* War 20px 0 */
+    background-color: rgb(17, 14, 0);
+}
+
+.new-grid h2 {
+    color: rgb(90, 145, 90);
+    font-size: 5rem; /* War 80px */
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-family: 'Amatic SC', cursive;
+}
+
+.new-grid p {
+    font-size: 2.1875rem; /* War 35px */
+    line-height: 0.5; /* Bleibt als relative Maßeinheit unverändert */
+    font-weight: 400;
+    font-family: 'Amatic SC', sans-serif;
+}
   .new-grid p {
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 400; /* Verwendet die normale Schriftstärke für Textabsätze */
-    font-family: 'Amatic SC', sans-serif; /* Setzt Amatic SC als Schriftart */
-  }
-  .new-grid p {
-    font-size: 35px; /* Erhöht die Schriftgröße der Paragraphen */
+    font-size: 2.1875rem; /* Erhöht die Schriftgröße der Paragraphen */
     line-height: 0.5; /* Verbessert die Lesbarkeit durch größeren Zeilenabstand */
   }
 
@@ -254,7 +246,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 
  /* Übergeordneter Container für das Karussell */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 62.5rem;
   position: relative;
   margin: auto;
 }
@@ -275,21 +267,21 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
+  padding: 1rem;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.125rem;
   transition: 0.6s ease;
   border-radius: 3px;
   user-select: none;
-  margin-bottom: -80px; 
+  margin-bottom: -5rem; 
   
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 0.1875rem 0 0 0.1875rem;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -300,12 +292,12 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 /* Caption schrift */
 .schrift {
   color: #fff;
-  font-size: 45px;
-  padding: 12px 20px;
+  font-size: 2.8125rem; /* War 45px */
+  padding: 0.75rem 1.25rem; /* War 12px 20px */
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0); /* Transparenter Hintergrund */
   text-align: center;
 }
 
@@ -314,9 +306,9 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  height: 0.9375rem; /* War 15px */
+  width: 0.9375rem; /* War 15px */
+  margin: 0 0.125rem; /* War 0 2px */
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -384,7 +376,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 }
 .banner-text {
   color: white !important;
-  font-size: 600px !important; /* Erhöht die Schriftgröße und erzwingt die Anwendung dieser Regel */
+  font-size: 37.5rem !important; /* Erhöht die Schriftgröße und erzwingt die Anwendung dieser Regel */
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -396,12 +388,12 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   background-color: rgb(170, 214, 170); /* Grüner Hintergrund */
   color: white; /* Weiße Schriftfarbe */
   border: none; /* Kein Rand */
-  padding: 10px 20px; /* Innenabstand */
-  font-size: 45px; /* Schriftgröße */
+  padding: 0.625rem 1.25rem; /* Umwandlung von 10px 20px */
+  font-size: 2.8125rem; /* Schriftgröße */
   cursor: pointer; /* Zeiger beim Überfahren */
   transition: background-color 0.3s; /* Übergang für die Hintergrundfarbe */
   border-radius: 20px; /* Abgerundete Ecken */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Schatten für den Button */
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3); /* Schatten für den Button */
 }
 
 
@@ -459,7 +451,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   
   .footer {
     background-color: rgb(17,14, 0); /* Dunkelgrauer Hintergrund */
-    padding: 20px;
+    padding: 1.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -473,9 +465,9 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 }
 
 .social-icon {
-    margin: 0 10px;
+    margin: 0 0.625rem;
     color: rgb(90, 145, 90);
-    font-size: 24px;
+    font-size: 1.5rem;
     transition: color 0.3s, transform 0.3s;
 }
 
