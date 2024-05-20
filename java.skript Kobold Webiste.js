@@ -70,3 +70,15 @@ document.addEventListener("DOMContentLoaded", function() {
   var height = contentBelow.getBoundingClientRect().top; // Distanz von contentBelow zum oberen Rand des Viewports
   backgroundImage.style.height = `${height}px`; // Setzt die Höhe des Hintergrundbilds dynamisch
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.nav-button a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+});

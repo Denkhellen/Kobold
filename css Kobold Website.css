@@ -32,6 +32,10 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   font-size: 2.1875rem;
   color: white; /* Weiße Schrift */
   transition: background-color 0.3s, color 0.3s; /* Glatte Farb- und Hintergrundübergänge */
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
 }
 .nav-button a {
   color: inherit; /* Erbt die Farbe des Buttons */
