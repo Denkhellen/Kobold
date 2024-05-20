@@ -333,11 +333,11 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
 /* Caption schrift */
 .schrift {
   color: #fff;
-  font-size: 2.8125rem; /* War 45px */
-  padding: 0.75rem 1.25rem; /* War 12px 20px */
+  font-size: 1.5rem; /* War 45px */
+  padding: 2.75rem 13rem; /* War 12px 20px */
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 60%;
   background: rgba(0, 0, 0, 0); /* Transparenter Hintergrund */
   text-align: center;
 }
