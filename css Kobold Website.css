@@ -33,6 +33,10 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   color: white; /* Weiße Schrift */
   transition: background-color 0.3s, color 0.3s; /* Glatte Farb- und Hintergrundübergänge */
 }
+.nav-button a {
+  color: inherit; /* Erbt die Farbe des Buttons */
+  text-decoration: none; /* Entfernt die Unterstreichung */
+}
 
 .nav-button:hover {
   background-color: transparent; /* Optional: Hintergrund beim Hover, wenn gewünscht */
