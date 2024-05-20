@@ -64,3 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
   
+document.addEventListener("DOMContentLoaded", function() {
+  var backgroundImage = document.querySelector('.background-image');
+  var contentBelow = document.querySelector('.content-below');
+  var height = contentBelow.getBoundingClientRect().top; // Distanz von contentBelow zum oberen Rand des Viewports
+  backgroundImage.style.height = `${height}px`; // Setzt die Höhe des Hintergrundbilds dynamisch
+});
