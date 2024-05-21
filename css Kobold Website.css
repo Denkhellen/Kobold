@@ -207,6 +207,7 @@ html {
     border: 0.0625rem solid rgb(17, 14, 0); /* War 1px */
   }
   
+
   .grid-item.image img {
     width: 100%; /* Sorgt dafür, dass Bilder die volle Zellenbreite nutzen */
     height: auto; /* Behält das ursprüngliche Seitenverhältnis der Bilder bei */
@@ -404,7 +405,7 @@ html {
   margin-bottom: 10px; /* Fügt unten einen kleinen Abstand hinzu */
   background-size: cover;
   transform-style: preserve-3d;
- 
+
   background-position: center; /* Stellt sicher, dass das Hintergrundbild zentriert ist */
 }
 
@@ -432,6 +433,7 @@ html {
   left: 50%;
   top: 50%;
 }
+
 
 /* CSS für den neuen Button */
 .join-button {
@@ -619,6 +621,14 @@ html {
   display: flex;
   align-items: center; /
 }
+.footer-column a {
+  text-decoration: none; /* Entfernt die Unterstreichung der Links */
+  color: inherit; /* Übernimmt die Schriftfarbe des Listenelements */
+}
+
+.footer-column:hover a {
+  color: #f8f8f9; /* Ändert die Farbe der Links beim Hover */
+}
 
 .footer-column ul li::before {
   content: "-"; /* Setzt einen Strich als Listensymbol */
@@ -628,6 +638,7 @@ html {
   top: 50%;
     transform: translateY(-50%);
 }
+
 
 .footer-copy {
   text-align: center; /* Rechtsbündige Ausrichtung des Copyright-Textes */
