@@ -435,20 +435,37 @@ html {
 
 /* CSS für den neuen Button */
 .join-button {
-  background-color: rgb(170, 214, 170); /* Grüner Hintergrund */
+  background: linear-gradient(90deg, #f34389, #ffd632); /* Grüner Hintergrund */
+  background-size: 200% 200%;
   color: white; /* Weiße Schriftfarbe */
   border: none; /* Kein Rand */
   padding: 0.625rem 1.25rem; /* Umwandlung von 10px 20px */
   font-size: 2.8125rem; /* Schriftgröße */
   cursor: pointer; /* Zeiger beim Überfahren */
-  transition: background-color 0.3s; /* Übergang für die Hintergrundfarbe */
-  border-radius: 20px; /* Abgerundete Ecken */
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3); /* Schatten für den Button */
+  border-radius: 40px; /* Abgerundete Ecken */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Schatten für den Button */
+  transition: all 0.3s; /* Übergang für den Button */
+  animation: gradientShift 3s infinite; /* Schatten für den Button */
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 4rem; /* Schriftgröße */
+  font-weight: 700; /* Fettdruck */
 }
 
 
 .join-button:hover {
-  background-color: #f4c3e5; /* Dunklerer Hintergrund beim Hover */
+  background-position: 100% 0; /* Dunklerer Hintergrund beim Hover */
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Stil für das Bild und den Button */
