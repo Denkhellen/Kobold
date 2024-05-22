@@ -299,15 +299,23 @@ html {
   position: relative;
   margin: auto;
 }
-
+.mySlides {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 
 
 .mySlides img {
-  max-width: 70%;  /* Bild nimmt maximal 90% der Breite des Slideshow-Containers ein */
-  height: auto;  /* Behält das Seitenverhältnis bei */
+  max-width: 70%; /* Bild nimmt maximal 70% der Breite des Slideshow-Containers ein */
+  height: auto; /* Behält das Seitenverhältnis bei */
   display: block;
-  margin: auto;  /* Zentriert das Bild horizontal */
+  margin: auto; /* Zentriert das Bild horizontal */
+  border-radius: 15px; /* Abgerundete Ecken */
+  box-shadow: 0 0 30px 30px rgba(4, 3, 0, 0.811); /* Weicher Schatten */
+  z-index: 1; /* Bild ist vor den Pfeilen */
 }
+
 
 
 
@@ -325,7 +333,7 @@ html {
   border-radius: 3px;
   user-select: none;
   margin-bottom: -5rem; 
-  
+  z-index: 4;
 }
 
 /* Position the "next button" to the right */
