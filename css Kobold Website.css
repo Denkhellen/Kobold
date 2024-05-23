@@ -229,10 +229,29 @@ html {
     border: 0.0625rem solid rgb(17, 14, 0); /* War 1px, konsistent umgerechnet */
   }
 
+  .light {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    animation: blink 2s infinite;
+  }
+  
+  .light.yellow { background-color: rgb(248, 248, 197); }
+  .light.green { background-color: rgb(197, 250, 197); }
+  .light.pink { background-color: rgb(252, 201, 252); }
+  .light.blue { background-color: rgb(172, 219, 248); }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+
   .grid-item.image img {
     width: 100%; /* Sorgt dafür, dass Bilder die volle Zellenbreite nutzen */
     height: auto; /* Behält das ursprüngliche Seitenverhältnis der Bilder bei */
   }
+
+  
   
   .grid-item.text {
     display: flex;

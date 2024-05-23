@@ -109,3 +109,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
   setInterval(changeText, interval);
 });
+document.addEventListener("DOMContentLoaded", function() {
+  const colors = ['yellow', 'green', 'pink', 'blue'];
+  const numLights = 20; // Anzahl der Lichter pro Bild
+
+  function createLight(color) {
+    const light = document.createElement('div');
+    light.classList.add('light', color);
+    light.style.width = `${Math.random() * 15 + 5}px`; // Zufällige Größe zwischen 5px und 15px
+    light.style.height = light.style.width;
+    light.style.top = `${Math.random() * 100}%`;
+    light.style.left = `${Math.random() * 100}%`;
+    light.style.animationDelay = `${Math.random() * 2}s`; // Zufällige Verzögerung der Animation
+    return light;
+  }
+
+  document.querySelectorAll('.grid-item.image').forEach(item => {
+    for (let i = 0; i < numLights; i++) {
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      const light = createLight(color);
+      item.appendChild(light);
+    }
+  });
+});
