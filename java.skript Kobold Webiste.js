@@ -82,3 +82,30 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const synonyms = {
+      "banner1": ["FEEL", "AURA", "SENSE", "TOUCH", "NOTICE"],
+      "banner2": ["SMELL", "AROMA", "SCENT", "PERFUME", "ODOR"],
+      "banner3": ["TASTE", "FLAVOR", "SAVOR", "RELISH", "PALATE"]
+  };
+
+  const interval = 4000; // Intervallzeit in Millisekunden
+  let index = 0;
+
+  function changeText() {
+      Object.keys(synonyms).forEach(id => {
+          const element = document.querySelector(`#${id} .banner-text`);
+          const newText = synonyms[id][index % synonyms[id].length];
+          element.innerHTML = '';
+          for (let i = 0; i < newText.length; i++) {
+              setTimeout(() => {
+                  element.innerHTML += newText[i];
+              }, i * 150); // Zeit zwischen Buchstaben
+          }
+      });
+      index++;
+  }
+
+  setInterval(changeText, interval);
+});

@@ -211,7 +211,10 @@ html {
   .grid-item.image img {
     width: 100%; /* Sorgt dafür, dass Bilder die volle Zellenbreite nutzen */
     height: auto; /* Behält das ursprüngliche Seitenverhältnis der Bilder bei */
+    border-radius: 15px; /* Rundet die Ecken der Bilder ab */
+    transition: transform 0.5s ease-out;
   }
+
   
   .text-grid {
     display: grid;
@@ -440,8 +443,17 @@ html {
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
+  animation: blinkTextCursor 0.75s steps(40) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
+@keyframes blinkTextCursor {
+  from { border-right-color: rgba(255, 255, 255, .75); }
+  to { border-right-color: transparent; }
+}
 
 /* CSS für den neuen Button */
 .join-button {
