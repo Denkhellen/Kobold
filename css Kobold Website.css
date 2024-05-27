@@ -112,9 +112,10 @@ html {
   }
 
   .title-container h1 {
-      font-size: 5rem; /* Kleinere Schriftgröße für Titel */
+      font-size: 4rem; /* Kleinere Schriftgröße für Titel */
       margin-bottom: 5rem; /* Reduzierter Abstand unter dem Titel */
-  }
+      text-align: center;
+    }
 
   .text-grid {
       grid-template-columns: 1fr; /* Alle Spalten fallen zu einer einzigen Spalte zusammen */
@@ -123,8 +124,20 @@ html {
   }
 
   .text-grid, .left-aligned, .right-aligned, .title-container h1, .nav-button {
-      text-align: left; /* Stelle die Textausrichtung auf linksbündig um */
+      text-align: center; /* Stelle die Textausrichtung auf linksbündig um */
   }
+  .text-grid > div {
+    width: 100%; /* Breitere Grids in der mobilen Ansicht */
+    margin: 0 auto; /* Zentriere die Grid-Elemente */
+  }
+
+  .text-grid p {
+    font-size: 1rem; /* Noch kleinere Schriftgröße für Texte in den Grids */
+    margin: 0 1rem; /* Abstand vom Rand */
+  }
+
+
+
 }
 
 @media (max-width: 480px) {
@@ -139,6 +152,7 @@ html {
   .text-grid {
       gap: 1.5rem; /* Noch geringerer Abstand zwischen den Zeilen */
       padding: 1.5rem; /* Noch geringerer Außenabstand */
+      text-align: center;
   }
 }
 
@@ -238,7 +252,7 @@ html {
   
   .light.yellow { background-color: rgb(248, 248, 197); }
   .light.green { background-color: rgb(197, 250, 197); }
-  .light.pink { background-color: rgb(252, 201, 252); }
+  .light.pink { background-color: rgb(255, 180, 255); }
   .light.blue { background-color: rgb(172, 219, 248); }
   
   @keyframes blink {
@@ -306,12 +320,32 @@ html {
     line-height: 0;/* Verbessert die Lesbarkeit durch größeren Zeilenabstand */
   }
 
+
   @media (max-width: 768px) {
     .new-grid {
-      grid-template-columns: 1fr 2fr 1fr; /* Anpassung für kleinere Bildschirme */
+      grid-template-columns: 1fr; /* Eine Spalte für kleinere Bildschirme */
+      padding: 0.625rem; /* Reduzierte Padding */
+      gap: 0.625rem; /* Reduzierte Lücke */
     }
-    .grid-item.text, .grid-item.image {
+    .grid-item.image, .grid-item.text {
       grid-column: 1 / -1; /* Sorgt dafür, dass Inhalte die gesamte Breite nutzen */
+    }
+    .grid-item.image img {
+      width: 100%; /* Bild füllt die gesamte Breite */
+    }
+    .grid-item.text {
+      font-size: 0.875rem; /* Kleinere Schriftgröße für Text */
+      margin-top: 0.625rem; /* Abstand über dem Text */
+    }
+    .new-grid h2 {
+      font-size: 2.5rem; /* Kleinere Schriftgröße für Überschriften */
+    }
+    .new-grid p {
+      font-size: 1rem; /* Kleinere Schriftgröße für Paragraphen */
+      line-height: 1.5; /* Größerer Zeilenabstand */
+    }
+    .grid-header h1 {
+      font-size: 5rem; /* Kleinere Schriftgröße für das Header */
     }
   }
 
@@ -400,6 +434,25 @@ html {
   background-color: #464545;
 }
 
+/* Media Queries für mobile Ansichten */
+@media (max-width: 768px) {
+  .mySlides img {
+    max-width: 90%; /* Bild nimmt maximal 90% der Breite des Slideshow-Containers ein */
+  }
+
+  .schrift {
+    font-size: 0.5rem; /* Kleinere Schriftgröße für die Caption */
+    padding: 0.2rem 1rem; /* Weniger Padding für die Caption */
+    width: 50%; /* Caption nimmt weniger Breite ein */
+    text-align: center;
+  }
+
+  .prev, .next {
+    font-size: 1rem; /* Kleinere Pfeile */
+    padding: 0.5rem; /* Weniger Padding für die Pfeile */
+  }
+}
+
 /* Fading animation */
 .fade {
   animation-name: fade;
@@ -472,6 +525,19 @@ html {
 @keyframes blinkTextCursor {
   from { border-right-color: rgba(255, 255, 255, .75); }
   to { border-right-color: transparent; }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: 0; /* Entfernt den Abstand unten */
+  }
+
+  .banner-text {
+    font-size: 12rem !important; /* Kleinere Schriftgröße für die mobile Ansicht */
+    padding: 0; /* Kein zusätzliches Padding */
+  }
 }
 
 /* CSS für den neuen Button */
