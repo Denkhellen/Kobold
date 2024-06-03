@@ -195,10 +195,26 @@ html {
 
 /* Media Query für kleine Bildschirme */
 @media (max-width: 768px) {
+  .text-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Fünf gleich große Spalten */
+    gap: 1.5rem;
+    padding: 1.5rem; /* Reduziertes Padding */
+    text-align: left; /* Links ausgerichteter Text */
+  }
+
   .text-statement {
-    font-size: 1em; /* Kleinere Schriftgröße für Mobilgeräte */
-    padding: 1.25rem; /* Geringeres Padding für Mobilgeräte */
-  }}
+    text-align: left; /* Links ausgerichteter Text */
+    padding: 0; /* Kein Padding */
+    margin-left: 0; /* Kein linker Außenabstand */
+    font-size: 1.5em; /* Kleinere Schriftgröße */
+  }
+
+  .text-grid > .text-statement:nth-child(1),
+  .text-grid > .text-statement:nth-child(2),
+  .text-grid > .text-statement:nth-child(3) {
+    grid-column: 1 / -1; /* Startet in Spalte 1 und erstreckt sich über alle 5 Spalten */
+  }
+}
  
   .content-below {
     background-color: rgb(17, 14, 0); /* Setzt den Hintergrund des Bereichs unter dem Bild auf Schwarz */
@@ -572,6 +588,21 @@ html {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+@media (max-width: 768px) {
+  .join-button {
+    font-size: 2rem; /* Kleinere Schriftgröße */
+    padding: 0.4rem 0.8rem; /* Reduziertes Padding */
+    border-radius: 30px; /* Kleinere abgerundete Ecken */
+  }
+}
+
+@media (max-width: 480px) {
+  .join-button {
+    font-size: 1.5rem; /* Noch kleinere Schriftgröße */
+    padding: 0.3rem 0.6rem; /* Noch reduziertes Padding */
+    border-radius: 20px; /* Noch kleinere abgerundete Ecken */
   }
 }
 
