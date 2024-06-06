@@ -437,11 +437,11 @@ html {
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 0.9375rem; /* War 15px */
-  width: 0.9375rem; /* War 15px */
-  margin: 0 0.125rem; /* War 0 2px */
+  height: 0.5rem; /* Adjust height for dash */
+  width: 2rem; /* Adjust width for dash */
+  margin: 0 0.125rem;
   background-color: #bbb;
-  border-radius: 50%;
+  border-radius: 0; /* Remove border-radius for dashes */
   display: inline-block;
   transition: background-color 0.6s ease;
 }
@@ -504,25 +504,33 @@ html {
   margin-bottom: 10px; /* Fügt unten einen kleinen Abstand hinzu */
   background-size: cover;
   transform-style: preserve-3d;
-
+  
   background-position: center; /* Stellt sicher, dass das Hintergrundbild zentriert ist */
 }
 
-
-
-#banner1 {
-  background-image: url('Smell.webp'); /* Ersetze dies mit dem Pfad zu deinem Bild */
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
+  background-position: center;
+  opacity: 0.4; /* Transparenz einstellen */
+  z-index: -1; /* Sicherstellen, dass das Pseudo-Element hinter dem Text liegt */
 }
 
-#banner2 {
-  background-image: url('Feel.webp'); /* Ersetze dies mit dem Pfad zu deinem Bild */
-  background-size: cover;
+#banner1::before {
+  background-image: url('Smell.webp'); /* Pfad zu Ihrem Bild */
 }
 
-#banner3 {
-  background-image: url('Taste.webp'); /* Ersetze dies mit dem Pfad zu deinem Bild */
-  background-size: cover;
+#banner2::before {
+  background-image: url('Feel.webp'); /* Pfad zu Ihrem Bild */
+}
+
+#banner3::before {
+  background-image: url('Taste.webp'); /* Pfad zu Ihrem Bild */
 }
 .banner-text {
   color: white !important;
