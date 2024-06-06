@@ -12,7 +12,15 @@
  <div class="background-image"></div>
 <div class="header">
   
+  <audio id="bird-sounds" loop>
+    <source src="wiese.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
   
+  <audio id="lounge-music" loop>
+    <source src="musik.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
   <nav class="navbar">
     <button class="nav-button"><a href="#title-container">HOME</a></button>  <!-- Ändern in Button -->
@@ -182,7 +190,9 @@
   </div>
   <div class="full-width-banner-image">
     <img src="Bogen.webp" alt="Bild">
-    <button class="join-button">Join the Goblin Horde! <br> Become Part of the Legend.
+    <button class="join-button">
+      <span class="join-title">Join the Goblin Horde!</span> <br> 
+      <span class="join-subtitle">Become Part of the Legend.</span>
     </button>
   </div>
 </div>

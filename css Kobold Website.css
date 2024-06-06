@@ -648,7 +648,15 @@ html {
   left: 50%; /* Zentriert horizontal */
   transform: translate(-50%, -50%); /* Zentriert sowohl horizontal als auch vertikal */
 }
+.join-title {
+  font-size: 5rem; /* Große Schriftgröße für den Titel */
+  font-weight: bold; /* Fettschrift für den Titel */
+}
 
+.join-subtitle {
+  font-size: 2.5rem; /* Kleinere Schriftgröße für den Untertitel */
+  font-weight: normal; /* Normale Schriftstärke für den Untertitel */
+}
   body {
     margin: 0;
     padding: 0;

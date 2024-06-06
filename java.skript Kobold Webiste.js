@@ -179,3 +179,67 @@ function showSlides() {
   dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 10000); // Change image every 5 seconds
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const birdSounds = document.getElementById('bird-sounds');
+  const loungeMusic = document.getElementById('lounge-music');
+  const transitionSection = document.getElementById('new-grid');
+  let hasTransitioned = false;
+
+  // Start bird sounds on page load
+  birdSounds.play();
+  birdSounds.volume = 1;
+  loungeMusic.volume = 0;
+  loungeMusic.pause(); // Ensure lounge music is paused initially
+
+  function checkTransition() {
+    const rect = transitionSection.getBoundingClientRect();
+    const isVisible = (rect.top <= window.innerHeight && rect.bottom >= 0);
+
+    if (isVisible && !hasTransitioned) {
+      hasTransitioned = true;
+      transitionToLoungeMusic();
+    } else if (!isVisible && hasTransitioned) {
+      hasTransitioned = false;
+      transitionToBirdSounds();
+    }
+  }
+
+  function transitionToLoungeMusic() {
+    loungeMusic.play();
+    let fadeOutInterval = setInterval(function() {
+      if (birdSounds.volume > 0) {
+        birdSounds.volume -= 0.01;
+        loungeMusic.volume += 0.01;
+      } else {
+        clearInterval(fadeOutInterval);
+        birdSounds.pause();
+        birdSounds.volume = 0;
+      }
+    }, 50);
+  }
+
+  function transitionToBirdSounds() {
+    birdSounds.play();
+    let fadeInInterval = setInterval(function() {
+      if (loungeMusic.volume > 0) {
+        loungeMusic.volume -= 0.01;
+        birdSounds.volume += 0.01;
+      } else {
+        clearInterval(fadeInInterval);
+        loungeMusic.pause();
+        loungeMusic.volume = 0;
+      }
+    }, 50);
+  }
+
+  window.addEventListener('scroll', checkTransition);
+  checkTransition(); // Initial check in case the section is already visible on load
+});
+
+// Helper property to track if an audio element is playing
+Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+  get: function(){
+    return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+  }
+});
