@@ -200,13 +200,17 @@ html {
     gap: 1.5rem;
     padding: 1.5rem; /* Reduziertes Padding */
     text-align: left; /* Links ausgerichteter Text */
+    grid-auto-rows: minmax(50px, auto);
   }
 
   .text-statement {
     text-align: left; /* Links ausgerichteter Text */
     padding: 0; /* Kein Padding */
     margin-left: 0; /* Kein linker Außenabstand */
-    font-size: 1.5em; /* Kleinere Schriftgröße */
+    font-size: 1.5rem !important; /* Größere Schriftgröße */
+    line-height: 1.2; /* Zeilenhöhe anpassen */
+    min-height: 50px; /* Mindesthöhe für das Element */
+    color: rgb(255, 255, 255) !important; /* Debugging-Farbe, um sicherzustellen, dass die Regel angewendet wird */
   }
 
   .text-grid > .text-statement:nth-child(1),
