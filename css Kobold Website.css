@@ -682,15 +682,21 @@ html {
   @media (max-width: 768px) {
     .join-button {
       top: 50%;
-      padding: 1rem 1rem; /* Adjust the top position for better centering on small screens */
+      padding: 1rem 3rem; /* Noch größeres Padding für einen breiteren Button */
+      max-width: 100%; /* Maximal 100% der Bildschirmbreite */
+      text-align: center; /* Text zentrieren */
+      transform: translate(-50%, -50%); /* Zentriert sowohl horizontal als auch vertikal */
+      min-width: 300px; /* Feste Mindestbreite für den Button */
     }
   
     .join-title {
       font-size: 2rem; /* Kleinere Schriftgröße für den Titel */
+      width: 100%; /* Volle Breite */
     }
   
     .join-subtitle {
-      font-size: 1rem; /* Kleinere Schriftgröße für den Untertitel */
+      font-size: 1.5rem; /* Kleinere Schriftgröße für den Untertitel */
+      width: 100%; /* Volle Breite */
     }
   
     .background-image {
