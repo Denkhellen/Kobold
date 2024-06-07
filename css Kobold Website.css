@@ -676,8 +676,22 @@ html {
     
   }
   @media (max-width: 768px) {
+    .join-button {
+      top: 60%;
+      padding: 1rem 1rem; /* Adjust the top position for better centering on small screens */
+    }
+  
+    .join-title {
+      font-size: 3rem; /* Kleinere Schriftgröße für den Titel */
+    }
+  
+    .join-subtitle {
+      font-size: 1.5rem; /* Kleinere Schriftgröße für den Untertitel */
+    }
+  
     .background-image {
-      height: calc(50vh - 50px); /* Reduziere die Höhe auf kleineren Bildschirmen */
+      height: 100vh;  /* Passt die Hintergrundgröße an */
+      background-position: center;
     }
   }
 
