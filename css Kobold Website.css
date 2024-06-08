@@ -23,6 +23,7 @@ body, .nav-button, .title-container, .navbar, .header, .left-aligned, .right-ali
   background-size: contain;
  }*/
 
+
  .nav-button {
   background-color: transparent; /* Kein Hintergrund */
   border: none;
@@ -156,6 +157,23 @@ html {
   }
 }
 
+.grid-header h1 {
+  font-size: 140px;
+  color: rgb(90, 145, 90);
+}
+
+/* Media Queries für mobile Ansichten */
+@media (max-width: 768px) {
+  .grid-header h1 {
+    font-size: 70px; /* Reduziere die Schriftgröße für mobile Geräte */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-header h1 {
+    font-size: 50px; /* Noch kleinere Schriftgröße für sehr kleine Bildschirme */
+  }
+}
 
 .grid-item.text h2 {
   color: rgb(90, 145, 90); /* Grüne Farbe für Überschriften */
@@ -393,8 +411,6 @@ html {
 }
 
 
-
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -456,20 +472,46 @@ html {
 
 /* Media Queries für mobile Ansichten */
 @media (max-width: 768px) {
+  /* Force the images to be full-width */
   .mySlides img {
-    max-width: 90%; /* Bild nimmt maximal 90% der Breite des Slideshow-Containers ein */
+    max-width: 100%;
+    height: auto;
   }
 
+  /* Adjust the caption text */
   .schrift {
-    font-size: 0.5rem; /* Kleinere Schriftgröße für die Caption */
-    padding: 0.2rem 1rem; /* Weniger Padding für die Caption */
-    width: 50%; /* Caption nimmt weniger Breite ein */
-    text-align: center;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    bottom: 50px;
   }
 
+  /* Adjust the buttons */
   .prev, .next {
-    font-size: 1rem; /* Kleinere Pfeile */
-    padding: 0.5rem; /* Weniger Padding für die Pfeile */
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    top: calc(50% - 20px); /* Adjust to center vertically */
+  }
+
+  /* Adjust the dots container */
+  .dots-container {
+    bottom: 20px; /* Adjust positioning */
+  }
+
+  /* Force layout of the slideshow container */
+  .slideshow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Ensure the slides take up full width */
+  .mySlides {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
