@@ -502,11 +502,19 @@ html {
 
   /* Adjust the buttons */
   .prev, .next {
-    font-size: 0.875rem;
-    padding: 0.5rem;
-    top: calc(50% - 20px); /* Adjust to center vertically */
+    font-size: 0.75rem; /* Kleinere Schriftgröße */
+    padding: 0.5rem; /* Weniger Padding */
+    top: 50%; /* Zentriere vertikal */
+    transform: translateY(-50%); /* Vertikale Zentrierung */
   }
 
+  .prev {
+    left: 5%; /* Positionierung der linken Schaltfläche */
+  }
+
+  .next {
+    right: 5%; /* Positionierung der rechten Schaltfläche */
+  }
   /* Adjust the dots container */
   .dots-container {
     bottom: 20px; /* Adjust positioning */
