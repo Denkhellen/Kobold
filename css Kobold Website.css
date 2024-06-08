@@ -358,30 +358,45 @@ html {
     line-height: 0;/* Verbessert die Lesbarkeit durch größeren Zeilenabstand */
   }
 
+  
 
   @media (max-width: 768px) {
     .new-grid {
       grid-template-columns: 1fr; /* Eine Spalte für kleinere Bildschirme */
+      grid-template-rows: auto; /* Automatische Zeilenhöhen */
       padding: 0.625rem; /* Reduzierte Padding */
       gap: 0.625rem; /* Reduzierte Lücke */
+      grid-auto-flow: dense; /* Erzwingt die Reihenfolge */
     }
-    .grid-item.image, .grid-item.text {
-      grid-column: 1 / -1; /* Sorgt dafür, dass Inhalte die gesamte Breite nutzen */
+  
+    /* Stellen Sie sicher, dass Bilder die gesamte Breite einnehmen */
+    .grid-item.image {
+      grid-column: 1 / -1;
+      width: 100%; /* Bild füllt die gesamte Breite */
+      height: auto;
     }
+  
     .grid-item.image img {
       width: 100%; /* Bild füllt die gesamte Breite */
+      height: auto;
     }
+  
+    /* Texte sollen unter den Bildern stehen */
     .grid-item.text {
-      font-size: 0.875rem; /* Kleinere Schriftgröße für Text */
+      grid-column: 1 / -1;
+      font-size: 1rem; /* Kleinere Schriftgröße für Text */
       margin-top: 0.625rem; /* Abstand über dem Text */
     }
+  
     .new-grid h2 {
       font-size: 2.5rem; /* Kleinere Schriftgröße für Überschriften */
     }
+  
     .new-grid p {
       font-size: 1rem; /* Kleinere Schriftgröße für Paragraphen */
       line-height: 1.5; /* Größerer Zeilenabstand */
     }
+  
     .grid-header h1 {
       font-size: 5rem; /* Kleinere Schriftgröße für das Header */
     }
