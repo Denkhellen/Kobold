@@ -244,3 +244,26 @@ Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const banners = document.querySelectorAll('.banner');
+
+  const options = {
+    root: null, // viewport
+    rootMargin: '0px',
+    threshold: 0.1 // Trigger when 10% of the element is visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target); // Stop observing once the animation has started
+      }
+    });
+  }, options);
+
+  banners.forEach(banner => {
+    observer.observe(banner);
+  });
+});

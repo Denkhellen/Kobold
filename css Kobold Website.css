@@ -298,6 +298,12 @@ html {
     50% { opacity: 1; }
   }
 
+  @media (max-width: 768px) {
+    .light:nth-of-type(odd) { /* Blendet jedes zweite Licht aus */
+        display: none;
+    }
+}
+
   .grid-item.image img {
     width: 100%; /* Sorgt dafür, dass Bilder die volle Zellenbreite nutzen */
     height: auto; /* Behält das ursprüngliche Seitenverhältnis der Bilder bei */
@@ -573,8 +579,10 @@ html {
   margin-bottom: 10px; /* Fügt unten einen kleinen Abstand hinzu */
   background-size: cover;
   transform-style: preserve-3d;
-  
+  opacity: 0; /* Start opacity for animation */
+  transform: translateY(20%);
   background-position: center; /* Stellt sicher, dass das Hintergrundbild zentriert ist */
+  transition: opacity 2s ease-out, transform 2s ease-out; /* Hinzufügen einer Transition */
 }
 
 .banner::before {
@@ -601,6 +609,7 @@ html {
 #banner3::before {
   background-image: url('Taste.webp'); /* Pfad zu Ihrem Bild */
 }
+
 .banner-text {
   color: white !important;
   font-size: 37.5rem !important; /* Erhöht die Schriftgröße und erzwingt die Anwendung dieser Regel */
@@ -609,10 +618,6 @@ html {
   left: 50%;
   top: 50%;
   animation: blinkTextCursor 0.75s steps(40) infinite normal;
-}
-@keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
 }
 
 @keyframes blinkTextCursor {
