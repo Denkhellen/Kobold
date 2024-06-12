@@ -633,7 +633,7 @@ html {
   }
 
   .banner-text {
-    font-size: 12rem !important; /* Kleinere Schriftgröße für die mobile Ansicht */
+    font-size: 10rem !important; /* Kleinere Schriftgröße für die mobile Ansicht */
     padding: 0; /* Kein zusätzliches Padding */
   }
 }
@@ -796,37 +796,36 @@ html {
     flex-direction: column;
     align-items: center;
   }
-
+  
   .social-icons {
     display: flex;
     justify-content: center;
     width: 100%; /* Füllt die Breite aus */
-    margin-bottom: 5rem; /* Abstand zu den darunterliegenden Elementen */
-}
-
-.social-icon {
-    margin: 0 0.625rem;
+    margin-bottom: 3rem; /* Abstand zu den darunterliegenden Elementen */
+  }
+  
+  .social-icon {
+    margin: 0 0.3125rem; /* Reduzierter Abstand */
     color: rgb(90, 145, 90);
-    font-size: 3rem;
+    font-size: 2rem; /* Kleinere Schriftgröße */
     transition: color 0.3s, transform 0.3s;
-}
-
+  }
   
   .social-icon:hover {
-    color: #af4c8c; /* Grüne Farbe beim Hover */
+    color: #af4c8c; /* Farbe beim Hover */
     transform: scale(1.1); /* Vergrößern des Icons */
   }
   
   /* Font Awesome muss eingebunden werden */
-
+  
   .container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.footer-content {
+  }
+  
+  .footer-content {
     display: flex;
     width: 100%; /* Nutzt die volle Breite */
     justify-content: center; /* Verteilt den Raum gleichmäßig */
@@ -834,105 +833,106 @@ html {
     padding: 1rem; /* Fügt etwas Innenabstand hinzu */
     position: relative;
   }
-
-.footer-columns {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Vertikal ausgerichtet am Anfang */
-  text-align: left; 
-  margin-bottom: 5rem;
-}
-
-.footer-column {
-    margin: 0 1.25rem; /* Gleichmäßiger Abstand zwischen den Spalten, umgerechnet in rem */
-  }
-
-.footer-column h3 {
-  margin-bottom: 0.625rem; /* Umrechnung von 10px in rem */
-  font-size: 2rem; /* Größere Schrift für Überschriften */
-    color: rgb(90, 145, 90); /* Größere Schrift für Überschriften, umgerechnet in rem */
-}
-
-.footer-column ul {
-  list-style-type: none; /* Entfernt die Standard-Punkte der Liste */
-  padding: 0; 
-  margin: 0;/* Entfernt das Standard-Padding der Liste */
-}
-
-.footer-column ul li {
-  font-size: 1.5rem; /* Größere Schrift für Listenelemente, umgerechnet in rem */
-  padding-left: 1.5rem; /* Abstand links für das Icon */
-  text-align: left;
-  position: relative;
-  display: flex;
-  align-items: center; /
-}
-.footer-column a {
-  text-decoration: none; /* Entfernt die Unterstreichung der Links */
-  color: inherit; /* Übernimmt die Schriftfarbe des Listenelements */
-}
-
-.footer-column:hover a {
-  color: #f8f8f9; /* Ändert die Farbe der Links beim Hover */
-}
-
-.footer-column ul li::before {
-  content: "-"; /* Setzt einen Strich als Listensymbol */
-  position: absolute;
-  left: 0;
-  font-size: 1.5rem; /* Vergrößert das Icon */
-  top: 50%;
-    transform: translateY(-50%);
-}
-
-
-.footer-copy {
-  text-align: center; /* Rechtsbündige Ausrichtung des Copyright-Textes */
-  padding: 0.625rem 1.25rem; /* Umrechnung von 10px und 20px in rem */
-  font-size: 0.75rem; /* Umrechnung von 12px in rem */
   
-}
-.footer-copy p {
-  margin: 0.5rem 0;
-  line-height: 1.5;
-}
-@media (max-width: 768px) {
   .footer-columns {
-    flex-direction: column;
-    align-items: flex-start; /* Ausrichtung am Anfang */
-    text-align: left;
-    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Vertikal ausgerichtet am Anfang */
+    text-align: left; 
+    margin-bottom: 3rem; /* Reduzierter Abstand */
   }
-
+  
   .footer-column {
-      margin: 1rem 0;
+    margin: 0 0.625rem; /* Gleichmäßiger Abstand zwischen den Spalten */
   }
-
-  .social-icon {
-      font-size: 3rem;
-      margin: 0 0.5rem;
-  }
-
+  
   .footer-column h3 {
-      font-size: 1.5rem;
+    margin-bottom: 0.3125rem; /* Umrechnung von 10px in rem */
+    font-size: 1.5rem; /* Kleinere Schriftgröße */
+    color: rgb(90, 145, 90); /* Schriftfarbe */
   }
-
+  
+  .footer-column ul {
+    list-style-type: none; /* Entfernt die Standard-Punkte der Liste */
+    padding: 0; 
+    margin: 0; /* Entfernt das Standard-Padding der Liste */
+  }
+  
   .footer-column ul li {
-      font-size: 1.2rem;
-      padding-left: 1rem;
-      line-height: 2.5;
+    font-size: 1rem; /* Kleinere Schriftgröße */
+    padding-left: 1rem; /* Abstand links für das Icon */
+    text-align: left;
+    position: relative;
+    display: flex;
+    align-items: center;
   }
-
+  
+  .footer-column a {
+    text-decoration: none; /* Entfernt die Unterstreichung der Links */
+    color: inherit; /* Übernimmt die Schriftfarbe des Listenelements */
+  }
+  
+  .footer-column:hover a {
+    color: #f8f8f9; /* Ändert die Farbe der Links beim Hover */
+  }
+  
   .footer-column ul li::before {
-      font-size: 1.2rem;
+    content: "-"; /* Setzt einen Strich als Listensymbol */
+    position: absolute;
+    left: 0;
+    font-size: 1rem; /* Kleinere Schriftgröße */
+    top: 50%;
+    transform: translateY(-50%);
   }
-
+  
   .footer-copy {
-      padding: 0.5rem 1rem;
-      font-size: 0.7rem;
+    text-align: center; /* Zentrierte Ausrichtung des Copyright-Textes */
+    padding: 0.25rem 0.5rem; /* Umrechnung von 10px und 20px in rem */
+    font-size: 0.5rem; /* Kleinere Schriftgröße */
   }
-
+  
   .footer-copy p {
-      margin: 0.25rem 0;
+    margin: 0.25rem 0; /* Reduzierter Abstand */
+    line-height: 1.2; /* Reduzierte Zeilenhöhe */
   }
-}
+  
+  @media (max-width: 768px) {
+    .footer-columns {
+      flex-direction: column;
+      align-items: flex-start; /* Ausrichtung am Anfang */
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+  
+    .footer-column {
+      margin: 1rem 0;
+    }
+  
+    .social-icon {
+      font-size: 2rem; /* Kleinere Schriftgröße */
+      margin: 0 0.25rem; /* Reduzierter Abstand */
+    }
+  
+    .footer-column h3 {
+      font-size: 1.2rem; /* Kleinere Schriftgröße */
+    }
+  
+    .footer-column ul li {
+      font-size: 1rem; /* Kleinere Schriftgröße */
+      padding-left: 1rem; /* Abstand links für das Icon */
+      line-height: 2.5;
+    }
+  
+    .footer-column ul li::before {
+      font-size: 1rem; /* Kleinere Schriftgröße */
+    }
+  
+    .footer-copy {
+      padding: 0.5rem 1rem;
+      font-size: 0.5rem; /* Kleinere Schriftgröße */
+    }
+  
+    .footer-copy p {
+      margin: 0.25rem 0; /* Reduzierter Abstand */
+    }
+  }
