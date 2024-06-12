@@ -186,14 +186,15 @@ html {
 
 /* Styling für jeden Satz und spezifische Platzierung bleiben gleich */
 .text-statement {
-
-  color: #faf8f8; 
+  color: #faf8f8;
   padding: 0.625rem; /* Innenabstand */
   text-align: left; /* Textausrichtung links */
   font-size: 3em; /* Größere Schrift */
   font-family: 'Amatic SC', sans-serif; /* Setzt die Schriftart */
   font-weight: bold; /* Macht den Text fett */
-  
+  opacity: 0; /* Start opacity for animation */
+  transform: translateY(20%); /* Start position from below */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Transition für smooth animation */
 }
 
 .text-grid > .text-statement:nth-child(1) {
@@ -209,6 +210,11 @@ html {
 .text-grid > .text-statement:nth-child(3) {
   grid-column: 3 / 4; /* Platziert den dritten Satz in der dritten Spalte */
   grid-row: 3 / 4;
+}
+
+.text-statement.visible {
+  opacity: 1; /* End opacity for animation */
+  transform: translateY(0); /* End position for animation */
 }
 
 /* Media Query für kleine Bildschirme */
