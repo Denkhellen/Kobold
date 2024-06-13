@@ -184,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const birdSounds = document.getElementById('bird-sounds');
   const loungeMusic = document.getElementById('lounge-music');
   const transitionSection = document.getElementById('new-grid');
+  
   let hasTransitioned = false;
 
   // Start bird sounds on page load
@@ -287,5 +288,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   textStatements.forEach(text => {
     observer.observe(text);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const birdSounds = document.getElementById('bird-sounds');
+  const loungeMusic = document.getElementById('lounge-music');
+  const newGrid = document.getElementById('new-grid');
+
+  // Start the bird sounds when the page loads
+  birdSounds.play();
+
+  // Scroll event to change music
+  window.addEventListener('scroll', function() {
+    const newGridTop = newGrid.getBoundingClientRect().top;
+    const viewportHeight = window.innerHeight;
+
+    if (newGridTop <= viewportHeight && newGridTop >= 0) {
+      // Pause bird sounds and play lounge music
+      if (!loungeMusic.paused) return;
+      birdSounds.pause();
+      birdSounds.currentTime = 0; // Reset the bird sounds
+      loungeMusic.play();
+    } else {
+      // Pause lounge music and play bird sounds
+      if (!birdSounds.paused) return;
+      loungeMusic.pause();
+      loungeMusic.currentTime = 0; // Reset the lounge music
+      birdSounds.play();
+    }
   });
 });
