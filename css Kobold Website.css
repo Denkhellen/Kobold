@@ -369,7 +369,14 @@ html {
     font-size: 1.3rem; /* Erhöht die Schriftgröße der Paragraphen */
     line-height: 0;/* Verbessert die Lesbarkeit durch größeren Zeilenabstand */
   }
-
+  .grid-item.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden; /* Verhindert Überlauf */
+    white-space: nowrap; /* Verhindert Zeilenumbruch */
+    text-overflow: ellipsis; /* Fügen Sie Ellipsen hinzu, wenn der Text zu lang ist */
+  }
   
 
   @media (max-width: 768px) {
