@@ -377,7 +377,11 @@ html {
     white-space: nowrap; /* Verhindert Zeilenumbruch */
     text-overflow: ellipsis; /* Fügen Sie Ellipsen hinzu, wenn der Text zu lang ist */
   }
+  .read-more {
+    display: none; /* Versteckt den Link in der Desktop-Ansicht */
+  }
   
+
 
   @media (max-width: 768px) {
     .new-grid {
@@ -410,15 +414,28 @@ html {
     .new-grid h2 {
       font-size: 2.5rem; /* Kleinere Schriftgröße für Überschriften */
     }
-  
-    .new-grid p {
-      font-size: 1rem; /* Kleinere Schriftgröße für Paragraphen */
-      line-height: 1.5; /* Größerer Zeilenabstand */
-    }
-  
     .grid-header h1 {
       font-size: 5rem; /* Kleinere Schriftgröße für das Header */
     }
+    .new-grid .grid-item.text p {
+      display: none; /* Versteckt den Text in der mobilen Ansicht */
+    }
+  
+  
+    .read-more {
+      display: block; /* Zeigt den Link in der mobilen Ansicht */
+      font-size: 1rem; /* Schriftgröße für den Link */
+      color: white; /* Linkfarbe */
+      font-family: 'Montserrat', cursive; /* Schriftart */
+      text-transform: uppercase; /* Großbuchstaben */
+      text-decoration: none; /* Keine Unterstreichung */
+      cursor: pointer; /* Zeigt den Mauszeiger als Zeigefinger */
+      position: relative; /* Ermöglicht die Positionierung des Pfeils */
+      margin-left: 0.8rem; /* Abstand zum vorherigen Element */
+    }
+  
+
+
   }
 
  /* Übergeordneter Container für das Karussell */
